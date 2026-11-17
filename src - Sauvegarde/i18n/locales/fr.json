@@ -1,0 +1,77 @@
+{
+  "languages": {
+    "choose": "Choisir une langue",
+    "loadError": "Impossible de charger les langues."
+  },
+  "nav": {
+    "home": "Accueil",
+    "explore": "Explorer",
+    "profile": "Mon profil",
+    "logout": "Déconnexion",
+    "login": "Se connecter",
+    "signup": "Créer un compte"
+  },
+  "home": {
+    "eyebrow": "Le répertoire afro du Brésil",
+    "titleLine": "La ville a mille histoires.",
+    "titleAccent": "Trouvez la vôtre.",
+    "intro": "Restaurants, boutiques, salons de coiffure et ateliers de couture africains et afro-descendants. Des adresses vivantes, des rencontres qui commencent près de vous.",
+    "explore": "Explorer les adresses",
+    "discoverTitle": "Découvrir",
+    "discoverText": "Un annuaire par ville, catégorie et pays d'origine, enrichi de photos, horaires et avis.",
+    "connectTitle": "Échanger",
+    "connectText": "Contactez directement les commerces, gardez vos favoris et retrouvez vos échanges.",
+    "growTitle": "Faire grandir",
+    "growText": "Des fiches gratuites, des profils vivants et une modération qui protège la qualité.",
+    "storyEyebrow": "Un commerce mérite d'être trouvé",
+    "storyTitle": "Votre savoir-faire a sa place sur la carte.",
+    "storyText": "Créez votre vitrine et faites connaître votre activité au-delà de votre quartier.",
+    "storyButton": "Présenter mon activité ↗"
+  },
+  "footer": {
+    "tagline": "Les bonnes adresses afro, à portée de quartier.",
+    "listBusiness": "Référencer un commerce",
+    "login": "Connexion"
+  },
+  "map": {
+    "you_are_here": "Vous êtes ici",
+    "view_business": "Voir la fiche",
+    "not_located": "{{n}} commerce(s) sans position ne sont pas affichés sur la carte."
+  },
+  "explore": {
+    "eyebrow": "Le répertoire",
+    "title": "Explorer les adresses",
+    "lead": "Des lieux indépendants, sélectionnés pour leur ancrage afro.",
+    "search": "Rechercher",
+    "searchPlaceholder": "Nom, activité, quartier…",
+    "city": "Ville",
+    "allCities": "Toutes les villes",
+    "country": "Pays d'origine",
+    "allCountries": "Tous les pays",
+    "all": "Tous",
+    "viewList": "Liste",
+    "viewMap": "Carte",
+    "nearMe": "Autour de moi",
+    "nearMeOn": "Autour de moi : activé",
+    "radiusLabel": "Rayon de recherche",
+    "radiusOption": "Dans un rayon de {{km}} km",
+    "geoUnavailable": "La géolocalisation n'est pas disponible sur ce navigateur.",
+    "geoDenied": "Impossible d'obtenir votre position. Autorisez la localisation dans le navigateur.",
+    "loadError": "Impossible de charger les commerces. Vérifiez que l'API fonctionne.",
+    "searching": "Recherche en cours…",
+    "found_one": "{{count}} adresse trouvée",
+    "found_other": "{{count}} adresses trouvées",
+    "noResults": "Aucun résultat. Essayez une autre recherche.",
+    "mapLimit": "Les {{n}} premiers commerces sont affichés. Affinez votre recherche pour voir les autres.",
+    "previous": "← Précédent",
+    "next": "Suivant →",
+    "page": "Page {{current}} sur {{last}}"
+  },
+  "card": {
+  "discover": "Découvrir",
+  "noReviews": "Pas encore d'avis",
+  "reviews_one": "{{count}} avis",
+  "reviews_other": "{{count}} avis",
+  "distance": "à {{km}} km"
+}
+}

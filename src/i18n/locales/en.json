@@ -1,0 +1,205 @@
+{
+  "languages": {
+    "choose": "Choose a language",
+    "loadError": "Unable to load languages."
+  },
+  "nav": {
+    "home": "Home",
+    "explore": "Explore",
+    "profile": "My profile",
+    "logout": "Log out",
+    "login": "Log in",
+    "signup": "Create an account",
+    "admin": "Administration",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
+  },
+  "home": {
+    "eyebrow": "The Afro directory of Brazil",
+    "titleLine": "Experience the richness",
+    "titleAccent": "of Africa in Brazil.",
+    "intro": "African and Afro-descendant restaurants, shops, hair salons and tailoring workshops. Lively places, and encounters that start close to you.",
+    "searchPlaceholder": "A restaurant, a shop, a neighborhood…",
+    "searchAria": "Search for a business",
+    "card1Title": "Interactive map",
+    "card1Text": "Find places around you",
+    "card2Title": "Moderated reviews",
+    "card2Text": "Reliable, verified listings",
+    "card3Title": "Direct messaging",
+    "card3Text": "Message the business in one click",
+    "scrollCue": "See more",
+    "universEyebrow": "Browse by category",
+    "universTitle": "Everything that makes Africa vibrate, close to home.",
+    "discoverTitle": "Discover",
+    "discoverText": "A directory by city, category and country of origin, with photos, opening hours and reviews.",
+    "connectTitle": "Connect",
+    "connectText": "Contact businesses directly, keep your favorites and find your conversations.",
+    "growTitle": "Grow",
+    "growText": "Free listings, lively profiles and moderation that protects quality.",
+    "storyEyebrow": "A business deserves to be found",
+    "storyTitle": "Your know-how has its place on the map.",
+    "storyText": "Create your storefront and make your business known beyond your neighborhood.",
+    "storyCta": "Present my business"
+  },
+  "footer": {
+    "tagline": "The best Afro places, within reach of your neighborhood.",
+    "bridge": "A bridge between Africa and Brazil.",
+    "categories": "Restaurants · Shops · Hair · Tailoring",
+    "copyright": "© {{year}} afroponte. All rights reserved.",
+    "listBusiness": "List a business",
+    "login": "Log in"
+  },
+  "univers": {
+    "restaurants": { "title": "Restaurants", "text": "Flavors of Africa, from maffé to thieboudienne." },
+    "shops": { "title": "Shops", "text": "Fabrics, spices, products from home and fashion." },
+    "beauty": { "title": "Hair and beauty", "text": "Braids, care and specialized salons." },
+    "craft": { "title": "Tailoring and crafts", "text": "Wax prints, made-to-measure and workshop know-how." }
+  },
+  "band": {
+    "culture": "Culture",
+    "community": "Community"
+  },
+  "splash": {
+    "africa": "Africa",
+    "brazil": "Brazil"
+  },
+    "common": {
+    "error": "Something went wrong. Please try again."
+  },
+  "auth": {
+    "login": {
+      "eyebrow": "Good to see you again",
+      "title": "Step back into the circle.",
+      "lead": "Log in to find your favorites and your conversations.",
+      "email": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "password": "Password",
+      "submit": "Log in",
+      "submitting": "Logging in...",
+      "noAccount": "No account yet?",
+      "createAccount": "Create an account"
+    },
+    "register": {
+      "eyebrow": "Join the network",
+      "title": "Create your space.",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "password": "Password",
+      "confirm": "Confirm password",
+      "language": "Preferred language",
+      "accountType": "I am",
+      "typeUser": "An individual",
+      "typeMerchant": "A business owner",
+      "submit": "Create my account",
+      "submitting": "Sending...",
+      "already": "Already registered?",
+      "login": "Log in",
+      "languagesError": "Unable to load languages. Check that the API is running."
+    }
+  },
+  "profile": {
+    "eyebrow": "Settings",
+    "title": "My profile",
+    "loading": "Loading…",
+    "loadError": "Unable to load the profile.",
+    "name": "Name",
+    "phone": "Phone",
+    "language": "Preferred language",
+    "save": "Save",
+    "saving": "Saving...",
+    "saved": "Profile saved.",
+    "saveError": "Unable to save. Please try again.",
+    "accountInfo": "Account information",
+    "readonly": "This information cannot be changed here.",
+    "email": "Email",
+    "accountType": "Account type",
+    "status": "Status"
+  },
+  "roles": {
+    "user": "Individual",
+    "merchant": "Business owner",
+    "admin": "Administrator"
+  },
+  "status": {
+    "active": "Active",
+    "pending": "Pending",
+    "suspended": "Suspended"
+  },
+  "detail": {
+    "back": "← Back to the directory",
+    "loading": "Loading…",
+    "notFound": "This listing could not be found.",
+    "loadError": "Unable to load the listing.",
+    "call": "Call",
+    "fallbackCountry": "Africa & diaspora",
+    "artNote": "A place worth discovering",
+    "contact": "Contact details",
+    "origin": "Country of origin",
+    "languages": "Languages",
+    "hours": "Opening hours",
+    "noHours": "Opening hours not provided.",
+    "closed": "Closed",
+    "photos": "Photos",
+    "photoAlt": "Photo of {{name}}",
+    "community": "What the community says",
+    "noReviews": "No reviews yet.",
+    "member": "A member"
+  },
+  "days": {
+    "mon": "Monday",
+    "tue": "Tuesday",
+    "wed": "Wednesday",
+    "thu": "Thursday",
+    "fri": "Friday",
+    "sat": "Saturday",
+    "sun": "Sunday"
+  },
+  "map": {
+    "you_are_here": "You are here",
+    "view_business": "View listing",
+    "not_located": "{{n}} business(es) without a location are not shown on the map."
+  },
+  "explore": {
+    "eyebrow": "The directory",
+    "title": "Explore places",
+    "lead": "Independent places, selected for their Afro roots.",
+    "search": "Search",
+    "searchPlaceholder": "Name, activity, neighborhood…",
+    "city": "City",
+    "allCities": "All cities",
+    "country": "Country of origin",
+    "allCountries": "All countries",
+    "all": "All",
+    "viewList": "List",
+    "viewMap": "Map",
+    "nearMe": "Near me",
+    "nearMeOn": "Near me: on",
+    "radiusLabel": "Search radius",
+    "radiusOption": "Within {{km}} km",
+    "geoUnavailable": "Geolocation is not available in this browser.",
+    "geoDenied": "Unable to get your position. Allow location access in your browser.",
+    "loadError": "Unable to load businesses. Check that the API is running.",
+    "searching": "Searching…",
+    "found_one": "{{count}} place found",
+    "found_other": "{{count}} places found",
+    "noResults": "No results. Try another search.",
+    "mapLimit": "The first {{n}} businesses are shown. Refine your search to see the others.",
+    "previous": "← Previous",
+    "next": "Next →",
+    "page": "Page {{current}} of {{last}}"
+  },
+  "card": {
+    "discover": "Discover",
+    "noReviews": "No reviews yet",
+    "reviews_one": "{{count}} review",
+    "reviews_other": "{{count}} reviews",
+    "distance": "{{km}} km away"
+  },
+    "notFound": {
+    "title": "Page not found",
+    "text": "This page does not exist or has been moved."
+  }
+  
+}

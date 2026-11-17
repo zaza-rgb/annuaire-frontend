@@ -1,0 +1,207 @@
+{
+  "languages": {
+    "choose": "Choisir une langue",
+    "loadError": "Impossible de charger les langues."
+  },
+  "nav": {
+    "home": "Accueil",
+    "explore": "Explorer",
+    "profile": "Mon profil",
+    "logout": "Déconnexion",
+    "login": "Se connecter",
+    "signup": "Créer un compte",
+    "admin": "Administration",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu"
+  },
+  "home": {
+    "eyebrow": "Le répertoire afro du Brésil",
+    "titleLine": "Vivez la richesse",
+    "titleAccent": "de l'Afrique au Brésil.",
+    "intro": "Restaurants, boutiques, salons de coiffure et ateliers de couture africains et afro-descendants. Des adresses vivantes, des rencontres qui commencent près de vous.",
+    "searchPlaceholder": "Un restaurant, une boutique, un quartier…",
+    "searchAria": "Rechercher un commerce",
+    "card1Title": "Carte interactive",
+    "card1Text": "Trouvez les adresses autour de vous",
+    "card2Title": "Avis modérés",
+    "card2Text": "Des fiches fiables, validées",
+    "card3Title": "Messagerie directe",
+    "card3Text": "Écrivez au commerce en un clic",
+    "scrollCue": "Voir la suite",
+    "universEyebrow": "Explorer par univers",
+    "universTitle": "Tout ce qui fait vibrer l'Afrique, près de chez vous.",
+    "discoverTitle": "Découvrir",
+    "discoverText": "Un annuaire par ville, catégorie et pays d'origine, enrichi de photos, horaires et avis.",
+    "connectTitle": "Échanger",
+    "connectText": "Contactez directement les commerces, gardez vos favoris et retrouvez vos échanges.",
+    "growTitle": "Faire grandir",
+    "growText": "Des fiches gratuites, des profils vivants et une modération qui protège la qualité.",
+    "storyEyebrow": "Un commerce mérite d'être trouvé",
+    "storyTitle": "Votre savoir-faire a sa place sur la carte.",
+    "storyText": "Créez votre vitrine et faites connaître votre activité au-delà de votre quartier.",
+    "storyCta": "Présenter mon activité"
+  },
+  "footer": {
+    "tagline": "Les bonnes adresses afro, à portée de quartier.",
+    "bridge": "Une ponte entre l'Afrique et le Brésil.",
+    "categories": "Restaurants · Boutiques · Coiffure · Couture",
+    "copyright": "© {{year}} afroponte. Tous droits réservés.",
+    "listBusiness": "Référencer un commerce",
+    "login": "Connexion"
+  },
+  "univers": {
+    "restaurants": { "title": "Restaurants", "text": "Saveurs d'Afrique, du maffé au thieboudienne." },
+    "shops": { "title": "Boutiques", "text": "Tissus, épices, produits du pays et mode." },
+    "beauty": { "title": "Coiffure et beauté", "text": "Tresses, soins et salons spécialisés." },
+    "craft": { "title": "Couture et artisanat", "text": "Wax, sur-mesure et savoir-faire d'atelier." }
+  },
+  "band": {
+    "culture": "Culture",
+    "community": "Communauté"
+  },
+  "splash": {
+    "africa": "Afrique",
+    "brazil": "Brésil"
+  },
+    "common": {
+    "error": "Une erreur est survenue. Réessaie."
+  },
+  "auth": {
+    "login": {
+      "eyebrow": "Heureux de vous retrouver",
+      "title": "Entrer dans le cercle.",
+      "lead": "Connectez-vous pour retrouver vos favoris et vos échanges.",
+      "email": "Adresse e-mail",
+      "emailPlaceholder": "vous@exemple.com",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "submitting": "Connexion...",
+      "noAccount": "Pas encore de compte ?",
+      "createAccount": "Créer un compte"
+    },
+    "register": {
+      "eyebrow": "Faire partie du réseau",
+      "title": "Créer votre espace.",
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "E-mail",
+      "phone": "Téléphone (facultatif)",
+      "password": "Mot de passe",
+      "confirm": "Confirmer le mot de passe",
+      "language": "Langue préférée",
+      "accountType": "Je suis",
+      "typeUser": "Un particulier",
+      "typeMerchant": "Un commerçant",
+      "submit": "Créer mon compte",
+      "submitting": "Envoi...",
+      "already": "Déjà inscrit(e) ?",
+      "login": "Se connecter",
+      "languagesError": "Impossible de charger les langues. Vérifie que l'API tourne."
+    }
+  },
+  "profile": {
+    "eyebrow": "Paramètres",
+    "title": "Mon profil",
+    "loading": "Chargement…",
+    "loadError": "Impossible de charger le profil.",
+    "name": "Nom",
+    "phone": "Téléphone",
+    "language": "Langue préférée",
+    "save": "Enregistrer",
+    "saving": "Enregistrement...",
+    "saved": "Profil enregistré.",
+    "saveError": "Impossible d'enregistrer. Réessaie.",
+    "accountInfo": "Informations du compte",
+    "readonly": "Ces informations ne se modifient pas ici.",
+    "email": "E-mail",
+    "accountType": "Type de compte",
+    "status": "Statut"
+  },
+  "roles": {
+    "user": "Particulier",
+    "merchant": "Commerçant",
+    "admin": "Administrateur"
+  },
+  "status": {
+    "active": "Actif",
+    "pending": "En attente",
+    "suspended": "Suspendu"
+  },
+  "detail": {
+    "back": "← Retour à l'annuaire",
+    "loading": "Chargement…",
+    "notFound": "Cette fiche est introuvable.",
+    "loadError": "Impossible de charger la fiche.",
+    "call": "Appeler",
+    "fallbackCountry": "Afrique & diaspora",
+    "artNote": "Une adresse à découvrir",
+    "contact": "Coordonnées",
+    "origin": "Pays d'origine",
+    "languages": "Langues",
+    "hours": "Horaires",
+    "noHours": "Horaires non renseignés.",
+    "closed": "Fermé",
+    "photos": "Photos",
+    "photoAlt": "Photo de {{name}}",
+    "community": "La communauté en parle",
+    "noReviews": "Aucun avis pour le moment.",
+    "member": "Un membre"
+  },
+  "days": {
+    "mon": "Lundi",
+    "tue": "Mardi",
+    "wed": "Mercredi",
+    "thu": "Jeudi",
+    "fri": "Vendredi",
+    "sat": "Samedi",
+    "sun": "Dimanche"
+  },
+  "map": {
+    "you_are_here": "Vous êtes ici",
+    "view_business": "Voir la fiche",
+    "not_located": "{{n}} commerce(s) sans position ne sont pas affichés sur la carte."
+  },
+  
+  "explore": {
+    "eyebrow": "Le répertoire",
+    "title": "Explorer les adresses",
+    "lead": "Des lieux indépendants, sélectionnés pour leur ancrage afro.",
+    "search": "Rechercher",
+    "searchPlaceholder": "Nom, activité, quartier…",
+    "city": "Ville",
+    "allCities": "Toutes les villes",
+    "country": "Pays d'origine",
+    "allCountries": "Tous les pays",
+    "all": "Tous",
+    "viewList": "Liste",
+    "viewMap": "Carte",
+    "nearMe": "Autour de moi",
+    "nearMeOn": "Autour de moi : activé",
+    "radiusLabel": "Rayon de recherche",
+    "radiusOption": "Dans un rayon de {{km}} km",
+    "geoUnavailable": "La géolocalisation n'est pas disponible sur ce navigateur.",
+    "geoDenied": "Impossible d'obtenir votre position. Autorisez la localisation dans le navigateur.",
+    "loadError": "Impossible de charger les commerces. Vérifiez que l'API fonctionne.",
+    "searching": "Recherche en cours…",
+    "found_one": "{{count}} adresse trouvée",
+    "found_other": "{{count}} adresses trouvées",
+    "noResults": "Aucun résultat. Essayez une autre recherche.",
+    "mapLimit": "Les {{n}} premiers commerces sont affichés. Affinez votre recherche pour voir les autres.",
+    "previous": "← Précédent",
+    "next": "Suivant →",
+    "page": "Page {{current}} sur {{last}}"
+  },
+  "card": {
+    "discover": "Découvrir",
+    "noReviews": "Pas encore d'avis",
+    "reviews_one": "{{count}} avis",
+    "reviews_other": "{{count}} avis",
+    "distance": "à {{km}} km"
+  }
+  ,
+  "notFound": {
+    "title": "Page introuvable",
+    "text": "Cette page n'existe pas ou a été déplacée."
+  }
+  
+}
