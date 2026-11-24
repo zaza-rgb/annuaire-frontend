@@ -12,7 +12,10 @@
     "signup": "Create an account",
     "admin": "Administration",
     "menuOpen": "Open menu",
-    "menuClose": "Close menu"
+    "menuClose": "Close menu",
+    "merchant": "Merchant area",
+    "events": "Events",
+"organizer": "My organized events"
   },
   "home": {
     "eyebrow": "The Afro directory of Brazil",
@@ -47,13 +50,35 @@
     "categories": "Restaurants · Shops · Hair · Tailoring",
     "copyright": "© {{year}} afroponte. All rights reserved.",
     "listBusiness": "List a business",
-    "login": "Log in"
+    "login": "Log in",
+    "colExplore": "Explore",
+    "colMerchants": "Merchants",
+    "colSite": "AfroPonte",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms of use",
+    "legal": "Legal notice",
+    "backToTop": "Back to top",
+    "whatsapp": "WhatsApp"
   },
   "univers": {
-    "restaurants": { "title": "Restaurants", "text": "Flavors of Africa, from maffé to thieboudienne." },
-    "shops": { "title": "Shops", "text": "Fabrics, spices, products from home and fashion." },
-    "beauty": { "title": "Hair and beauty", "text": "Braids, care and specialized salons." },
-    "craft": { "title": "Tailoring and crafts", "text": "Wax prints, made-to-measure and workshop know-how." }
+    "restaurants": {
+      "title": "Restaurants",
+      "text": "Flavors of Africa, from maffé to thieboudienne."
+    },
+    "shops": {
+      "title": "Shops",
+      "text": "Fabrics, spices, products from home and fashion."
+    },
+    "beauty": {
+      "title": "Hair and beauty",
+      "text": "Braids, care and specialized salons."
+    },
+    "craft": {
+      "title": "Tailoring and crafts",
+      "text": "Wax prints, made-to-measure and workshop know-how."
+    }
   },
   "band": {
     "culture": "Culture",
@@ -63,7 +88,7 @@
     "africa": "Africa",
     "brazil": "Brazil"
   },
-    "common": {
+  "common": {
     "error": "Something went wrong. Please try again."
   },
   "auth": {
@@ -156,6 +181,16 @@
     "sat": "Saturday",
     "sun": "Sunday"
   },
+  "reviews": {
+    "title": "Reviews",
+    "loading": "Loading…",
+    "loadError": "Unable to load reviews.",
+    "empty": "No reviews yet.",
+    "write": "Write a review",
+    "rating": "Rating",
+    "comment": "Comment",
+    "date": "{{date}} by {{author}}"
+  },
   "map": {
     "you_are_here": "You are here",
     "view_business": "View listing",
@@ -197,9 +232,410 @@
     "reviews_other": "{{count}} reviews",
     "distance": "{{km}} km away"
   },
-    "notFound": {
+  "notFound": {
     "title": "Page not found",
     "text": "This page does not exist or has been moved."
+  },
+  "favorites": {
+    "title": "My favourites",
+    "count_one": "{{count}} favourite",
+    "count_other": "{{count}} favourites",
+    "emptyTitle": "No favourites yet",
+    "emptyText": "Tap the heart on a listing to find it here later.",
+    "explore": "Explore businesses",
+    "add": "Add to favourites",
+    "remove": "Remove from favourites",
+    "loadError": "Your favourites could not be loaded. Try again in a moment.",
+    "prev": "Previous",
+    "next": "Next",
+    "page": "Page {{current}} of {{last}}"
+  },
+  "review": {
+    "title": "Leave a review",
+    "rating": "Your rating",
+    "ratingValue": "{{n}} out of 5",
+    "comment": "Your comment (optional)",
+    "commentPlaceholder": "What you liked, what could be better…",
+    "submit": "Send my review",
+    "sent": "Thank you! Your review will appear once it has been approved.",
+    "chooseRating": "Choose a rating from 1 to 5.",
+    "already": "You have already reviewed this business.",
+    "own": "You cannot rate your own listing.",
+    "loginRequired": "Log in to leave a review.",
+    "login": "Log in",
+    "error": "Your review could not be sent. Try again."
+  },
+  "messages": {
+    "title": "Messages",
+    "empty": "No conversations",
+    "emptyText": "Open a business page and choose “Send a message” to write to them.",
+    "select": "Choose a conversation to read its messages.",
+    "noMessages": "No messages yet. Write the first one.",
+    "placeholder": "Write a message…",
+    "send": "Send",
+    "back": "Back to conversations",
+    "unread_one": "{{count}} unread message",
+    "unread_other": "{{count}} unread messages",
+    "loadError": "Messages could not be loaded. Try again in a moment.",
+    "sendError": "The message could not be sent. Check its content and try again.",
+    "contact": "Send a message",
+    "contactNoOwner": "This business has no registered owner yet.",
+    "contactOwn": "This is your own listing."
+  },
+  "forbidden": {
+    "title": "Access denied",
+    "code": "Error 403",
+    "text": "You don't have permission to view this page.",
+    "home": "Back to home",
+    "back": "Previous page"
+  },
+  "admin": {
+    "title": "Administration",
+    "nav": {
+      "dashboard": "Dashboard",
+      "businesses": "Listings",
+      "reviews": "Reviews",
+      "photos": "Photos",
+      "reports": "Reports",
+      "claims": "Claims",
+      "users": "Accounts",
+      "categories": "Categories",
+      "countries": "Countries",
+      "languages": "Languages"
+    },
+    "actionError": "The action failed. Please try again.",
+    "dashboard": {
+      "loadError": "Unable to load the statistics."
+    },
+    "prev": "Previous",
+    "next": "Next",
+    "page": "Page {{current}} of {{last}}",
+    "queue": {
+      "title": {
+        "businesses": "Listings to approve",
+        "reviews": "Reviews to moderate",
+        "photos": "Photos to moderate",
+        "reports": "Reports",
+        "claims": "Claims"
+      },
+      "approve": "Approve",
+      "reject": "Reject",
+      "resolve": "Resolve",
+      "dismiss": "Dismiss",
+      "accept": "Accept",
+      "by": "Author",
+      "on": "Listing",
+      "owner": "Owner",
+      "proposer": "Suggested by",
+      "empty": "Nothing to process right now.",
+      "filter": "Status",
+      "loadError": "Unable to load the list.",
+      "noText": "(no text)",
+      "photoAlt": "Uploaded photo"
+    },
+    "catalog": {
+      "title": {
+        "categories": "Categories",
+        "countries": "Countries of origin",
+        "languages": "Languages"
+      },
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "save": "Save",
+      "cancel": "Cancel",
+      "code": "Code",
+      "name": "Name",
+      "confirm": "Delete \"{{name}}\"?",
+      "empty": "Nothing here yet.",
+      "loadError": "Could not load the list.",
+      "error": "The operation failed."
+    },
+    "roles": {
+      "user": "Individual",
+      "merchant": "Merchant",
+      "admin": "Administrator"
+    },
+    "stats": {
+      "users": "Users",
+      "total": "Total",
+      "by_role": "By role",
+      "suspended": "Suspended",
+      "businesses": "Listings",
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "reviews": "Reviews",
+      "photos": "Photos",
+      "claims": "Claims",
+      "reports_open": "Open reports",
+      "conversations": "Conversations",
+      "messages": "Messages",
+      "user": "Individuals",
+      "merchant": "Merchants",
+      "admin": "Administrators"
+    },
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "open": "Open",
+      "resolved": "Resolved",
+      "dismissed": "Dismissed",
+      "active": "Active",
+      "suspended": "Suspended"
+    },
+    "users": {
+      "title": "Accounts",
+      "all": "All",
+      "search": "Search by name or email",
+      "count": "{{count}} account(s)",
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "created": "Joined",
+      "suspend": "Suspend",
+      "reactivate": "Reactivate",
+      "confirmSuspend": "Suspend this account? The user will be logged out.",
+      "self": "Your account",
+      "locked": "Protected administrator account"
+    }
+  },
+  "pages": {
+    "backHome": "Back to home",
+    "updated": "Last updated: {{date}}",
+    "toComplete": "(to be completed)",
+    "contactEmail": "Send an email",
+    "contactWhatsapp": "Write on WhatsApp",
+    "about": {
+      "title": "About AfroPonte",
+      "intro": "AfroPonte is a bridge between Africa and Brazil: a directory that helps you find African restaurants, shops, hair salons and tailoring workshops near you.",
+      "sections": [
+        {
+          "h": "Our mission",
+          "p": "To make African and Afro-descendant businesses in Brazil easier to find, and to connect the people who run them with the people looking for them: tourists, students, migrants, business travelers and families."
+        },
+        {
+          "h": "What you can do",
+          "p": "Search for a business by city, category or country of origin, see it on the map, save favorites, leave a review, and write directly to a merchant from the app, without going through WhatsApp."
+        },
+        {
+          "h": "For merchants",
+          "p": "Listing your business is free. Every listing is checked before it is published, and reviews and photos are moderated to keep the directory reliable."
+        },
+        {
+          "h": "A community",
+          "p": "AfroPonte grows with its users: suggest a business that is missing, report wrong information, share your experience."
+        },
+        {
+          "h": "Three languages",
+          "p": "The site is available in French, English and Portuguese."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact us",
+      "intro": "A question, a suggestion, a business to add or a problem to report? Write to us.",
+      "sections": [
+        {
+          "h": "For users",
+          "p": "To contact a merchant, use the in-app messaging from their listing."
+        },
+        {
+          "h": "For merchants",
+          "p": "To list or claim your business, create a merchant account. Need help? Write to us."
+        },
+        {
+          "h": "Report a problem",
+          "p": "An incorrect listing or inappropriate content? Use the report button, or write to us and tell us which page it is on."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "intro": "This page explains what data AfroPonte collects, why, and what your rights are, in line with Brazil’s General Data Protection Law (LGPD, Law No. 13,709/2018).",
+      "sections": [
+        {
+          "h": "Data we collect",
+          "p": "Account: name, email address, password (encrypted), phone number (optional), language and account type. Activity: favorites, reviews, photos and messages exchanged in the app. Location: only if you use “Near me”, to calculate nearby businesses."
+        },
+        {
+          "h": "Why we use it",
+          "p": "To create and secure your account, display the directory, enable messaging, moderate content and improve the service. We do not sell your data."
+        },
+        {
+          "h": "Your messages",
+          "p": "Conversations are private. Only reported conversations may be reviewed by the moderation team, to handle the report."
+        },
+        {
+          "h": "Sharing",
+          "p": "Your data is only shared with the technical providers needed to run the site (hosting, sending emails), or when the law requires it. Reviews and photos you publish are visible to other visitors."
+        },
+        {
+          "h": "Storage on your device",
+          "p": "The site saves your language and your login session in your browser. At this time, it does not use advertising cookies."
+        },
+        {
+          "h": "Retention",
+          "p": "Your data is kept as long as your account is active. You can ask for your account and data to be deleted at any time."
+        },
+        {
+          "h": "Your rights",
+          "p": "You can request access, correction, export or deletion of your data, and withdraw your consent. Write to {{email}}."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of use",
+      "intro": "By using AfroPonte, you agree to the rules below.",
+      "sections": [
+        {
+          "h": "The service",
+          "p": "AfroPonte is a free directory of African businesses in Brazil, with built-in messaging. We do not sell any product or service ourselves."
+        },
+        {
+          "h": "Your account",
+          "p": "You are responsible for your account and for keeping your password confidential. Give accurate information. An account may be suspended in case of abuse."
+        },
+        {
+          "h": "Merchant listings",
+          "p": "Merchants are responsible for the accuracy of their information (address, opening hours, prices). Each listing is approved by the team before publication, and may be refused or removed if it is false or misleading."
+        },
+        {
+          "h": "Reviews, photos and messages",
+          "p": "Only post honest content that belongs to you and respects others. Insults, harassment, discrimination, illegal content, fake reviews and spam are forbidden. Content may be moderated or removed."
+        },
+        {
+          "h": "Reports",
+          "p": "You can report a listing, a review, a photo or a message. The team reviews them and may suspend the accounts involved."
+        },
+        {
+          "h": "Liability",
+          "p": "Listing information comes from merchants and users: we cannot guarantee that it is always accurate. Exchanges and purchases between users and merchants are made at their own responsibility."
+        },
+        {
+          "h": "Changes",
+          "p": "We may change these terms. The update date is shown at the bottom of the page."
+        }
+      ]
+    },
+    "legal": {
+      "title": "Legal notice",
+      "intro": "Information about the publisher of the AfroPonte site.",
+      "sections": [
+        {
+          "h": "Publisher",
+          "p": "The site is published by {{owner}}. Contact: {{email}}."
+        },
+        {
+          "h": "Hosting",
+          "p": "The site is hosted by a web hosting provider; its details are available on request at {{email}}."
+        },
+        {
+          "h": "Intellectual property",
+          "p": "The AfroPonte name, logo, site design and texts are protected. Photos and texts published by users and merchants remain their property; by publishing them, they allow AfroPonte to display them on the site."
+        },
+        {
+          "h": "Personal data",
+          "p": "The processing of your data is described in the privacy policy."
+        },
+        {
+          "h": "Report content",
+          "p": "To report unlawful content, use the report button or write to {{email}}."
+        }
+      ]
+    }
+  },
+  "merchant": {
+    "nav": {
+      "dashboard": "My businesses",
+      "add": "Add a business",
+      "messages": "Messages"
+    },
+    "status": {
+      "all": "All",
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "dashboard": {
+      "title": "My businesses",
+      "subtitle": "Manage your listings, opening hours and photos.",
+      "add": "Register my business",
+      "loading": "Loading…",
+      "loadError": "Could not load your listings.",
+      "emptyTitle": "You have no business yet",
+      "emptyText": "Register your restaurant, shop or salon so the community can find you.",
+      "emptyFilter": "No listing in this category.",
+      "pendingNote": "Your listing is being reviewed by our team. It will be visible once approved.",
+      "rejectedNote": "Your listing was rejected. Edit it, then contact us if needed.",
+      "edit": "Edit",
+      "reviews": "Reviews",
+      "view": "View listing"
+    },
+    "form": {
+      "eyebrow": "New business",
+      "title": "Register my business",
+      "intro": "Fill in the basic information. Spoken languages and opening hours are set afterwards on the edit page.",
+      "name": "Business name",
+      "category": "Category",
+      "country": "Country of origin",
+      "city": "City",
+      "phone": "Phone",
+      "address": "Address",
+      "description": "Description",
+      "pricing": "Prices",
+      "pricingPlaceholder": "E.g. dish of the day R$25, haircut R$40",
+      "mapTitle": "Position on the map",
+      "mapHint": "Click on the map to place your business (optional).",
+      "choose": "Choose…",
+      "submit": "Submit for approval",
+      "submitting": "Sending…",
+      "loadError": "Could not load the lists.",
+      "error": "Something went wrong. Check the fields and try again.",
+      "forbidden": "Your account is not allowed to register a business.",
+      "geoError": "Could not get your position.",
+      "useMyPosition": "Use my position",
+      "clearPosition": "Clear position"
+    },
+    "edit": {
+      "eyebrow": "Edit my listing",
+      "notFound": "Listing not found.",
+      "forbidden": "You do not have access to this listing.",
+      "loadError": "Could not load the listing.",
+      "back": "Back",
+      "viewPublic": "View public page",
+      "created": "Listing created. It will be visible once approved by our team.",
+      "infoTitle": "Information and languages",
+      "fixedNote": "The name, category, city and address cannot be changed here.",
+      "languagesTitle": "Spoken languages",
+      "save": "Save",
+      "saving": "Saving…",
+      "saved": "Changes saved.",
+      "saveError": "Could not save. Please try again.",
+      "hoursTitle": "Opening hours",
+      "hoursHint": "Add one or more time slots per day. A day without slots is closed.",
+      "closed": "Closed",
+      "opens": "Opens",
+      "closes": "Closes",
+      "addSlot": "Add a slot",
+      "removeSlot": "Remove",
+      "saveHours": "Save hours",
+      "hoursSaved": "Hours saved.",
+      "hoursIncomplete": "Each slot needs an opening and a closing time.",
+      "hoursOrder": "The closing time must be after the opening time.",
+      "hoursOverlap": "Two slots on the same day overlap.",
+      "photosTitle": "Photos",
+      "photosLocked": "You will be able to add photos once your listing is approved.",
+      "photosHint": "JPG, PNG or WebP, 4 MB maximum.",
+      "noPhotos": "No published photo yet.",
+      "upload": "Add a photo",
+      "uploading": "Uploading…",
+      "uploaded": "Photo sent. It will appear after approval.",
+      "photoType": "Unsupported format (JPG, PNG or WebP only).",
+      "photoTooBig": "The photo is larger than 4 MB.",
+      "photoError": "Could not upload the photo."
+    }
   }
   
 }

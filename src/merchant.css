@@ -1,0 +1,428 @@
+/* ==========================================================
+   merchant.css : espace commerçant AfriConnect
+   Palette : vert foncé, orange, crème (maquette) + ta couleur
+   ========================================================== */
+
+:root {
+  --m-green: #0f3d2e;
+  --m-green-soft: #1d5a44;
+  --m-orange: #e08a1e;
+  --m-orange-dark: #7a3b00;
+  --m-cream: #fbf3e4;
+  --m-paper: #ffffff;
+  --m-ink: #1f2a24;
+  --m-muted: #6b7a72;
+  --m-line: #eadfc9;
+
+  /* TA COULEUR : remplace cette valeur par ton code hexadécimal */
+  --m-accent: #6b2358;
+  --m-accent-soft: #f3e4ee;
+
+  --m-ok: #1d7a4a;
+  --m-bad: #b3261e;
+  --m-radius: 14px;
+  --m-shadow: 0 6px 18px rgba(15, 61, 46, 0.08);
+}
+
+/* ---------- Mise en page ---------- */
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px 16px 48px;
+  color: var(--m-ink);
+  background: var(--m-cream);
+}
+.page.narrow-620 {
+  max-width: 620px;
+}
+
+.panel {
+  background: var(--m-paper);
+  border: 1px solid var(--m-line);
+  border-radius: var(--m-radius);
+  box-shadow: var(--m-shadow);
+  padding: 20px;
+  margin-bottom: 18px;
+}
+.panel.big {
+  padding: 28px;
+}
+.panel h2,
+.panel h3 {
+  color: var(--m-green);
+  margin: 0 0 8px;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--m-accent);
+  margin-bottom: 4px;
+}
+
+.m-muted {
+  color: var(--m-muted);
+  font-size: 0.92rem;
+  margin: 4px 0 12px;
+}
+
+/* ---------- Menu de l'espace commerçant ---------- */
+.m-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  background: var(--m-green);
+  padding: 8px;
+  border-radius: var(--m-radius);
+  margin-bottom: 22px;
+}
+.m-tabs a {
+  color: #f6ead2;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: background 0.15s;
+}
+.m-tabs a:hover {
+  background: var(--m-green-soft);
+}
+.m-tabs a.active {
+  background: var(--m-orange);
+  color: #fff;
+}
+
+/* ---------- En-tête de page ---------- */
+.m-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.m-head h1 {
+  margin: 0;
+  color: var(--m-green);
+}
+
+/* ---------- Boutons ---------- */
+.btn {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 9px 16px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.1s, background 0.15s;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn:disabled,
+.btn.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--m-orange);
+  color: #fff;
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--m-orange-dark);
+}
+.btn-light {
+  background: var(--m-accent-soft);
+  color: var(--m-accent);
+  border-color: var(--m-accent-soft);
+}
+.btn-light:hover {
+  border-color: var(--m-accent);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--m-green);
+  border-color: var(--m-line);
+}
+.btn-ghost:hover {
+  background: var(--m-cream);
+}
+.btn-block {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* ---------- Formulaires ---------- */
+.field {
+  margin-bottom: 14px;
+}
+.field label,
+.m-langs legend {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--m-green);
+  margin-bottom: 5px;
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid var(--m-line);
+  border-radius: 10px;
+  background: #fffdf8;
+  font: inherit;
+  color: var(--m-ink);
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--m-accent);
+  outline-offset: 1px;
+  border-color: var(--m-accent);
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.field-error {
+  color: var(--m-bad);
+  font-size: 0.85rem;
+  margin: 4px 0 0;
+}
+
+/* ---------- Messages ---------- */
+.alert {
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-size: 0.92rem;
+}
+.alert-error {
+  background: #fdecea;
+  color: var(--m-bad);
+  border: 1px solid #f4c7c3;
+}
+.m-ok {
+  background: #e6f4ec;
+  color: var(--m-ok);
+  border: 1px solid #bfe3cd;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-size: 0.92rem;
+}
+.m-note {
+  background: #fff4de;
+  color: var(--m-orange-dark);
+  border-left: 4px solid var(--m-orange);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  margin: 10px 0;
+}
+.m-note-bad {
+  background: #fdecea;
+  color: var(--m-bad);
+  border-left-color: var(--m-bad);
+}
+
+/* ---------- Badges de statut ---------- */
+.m-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #eee;
+  color: #555;
+}
+.m-badge-pending {
+  background: #fff1d6;
+  color: var(--m-orange-dark);
+}
+.m-badge-approved {
+  background: #e0f2e8;
+  color: var(--m-ok);
+}
+.m-badge-rejected {
+  background: #fbe3e1;
+  color: var(--m-bad);
+}
+
+/* ---------- Tableau de bord ---------- */
+.m-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.m-filters button {
+  border: 1px solid var(--m-line);
+  background: var(--m-paper);
+  color: var(--m-green);
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.m-filters button.active {
+  background: var(--m-accent);
+  border-color: var(--m-accent);
+  color: #fff;
+}
+
+.m-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.m-card {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.m-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+.m-card-top h3 {
+  margin: 0;
+}
+.m-card-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 10px;
+}
+.m-rating {
+  margin: 4px 0;
+  color: var(--m-orange-dark);
+  font-weight: 700;
+}
+.m-rating span {
+  color: var(--m-muted);
+  font-weight: 400;
+}
+.m-empty {
+  text-align: center;
+  padding: 36px 20px;
+}
+
+/* ---------- Horaires ---------- */
+.m-hours-row {
+  display: flex;
+  gap: 14px;
+  padding: 10px 0;
+  border-top: 1px solid var(--m-line);
+}
+.m-hours-day {
+  width: 100px;
+  font-weight: 700;
+  color: var(--m-green);
+  padding-top: 6px;
+}
+.m-hours-slots {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+.m-slot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.m-slot input[type='time'] {
+  padding: 7px 8px;
+  border: 1px solid var(--m-line);
+  border-radius: 8px;
+  font: inherit;
+}
+
+/* ---------- Langues ---------- */
+.m-langs {
+  border: 1px solid var(--m-line);
+  border-radius: 10px;
+  padding: 10px 14px 12px;
+  margin: 0 0 14px;
+}
+.m-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 16px 4px 0;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+.m-check input {
+  accent-color: var(--m-accent);
+}
+
+/* ---------- Photos ---------- */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+  margin: 12px 0;
+}
+.photo-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--m-line);
+}
+.m-upload {
+  cursor: pointer;
+}
+
+/* ---------- Carte (LocationPicker) ---------- */
+.m-map-box {
+  height: 280px;
+  border-radius: var(--m-radius);
+  overflow: hidden;
+  border: 1px solid var(--m-line);
+}
+.m-map-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+/* ---------- Téléphone ---------- */
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .m-hours-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .m-hours-day {
+    width: auto;
+    padding-top: 0;
+  }
+  .panel.big {
+    padding: 20px;
+  }
+}

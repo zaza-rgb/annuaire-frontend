@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { formatRating } from '../utils';
+import FavoriteButton from './FavoriteButton.jsx';
 
 const PHOTO_STYLES = ['photo-food', 'photo-style', 'photo-market', 'photo-craft', 'photo-cafe'];
 
@@ -13,6 +14,7 @@ export default function BusinessCard({ business: b, categoryName }) {
     <article className="business-card">
       <div className={`photo ${photoClass}`}>
         <span>{(categoryName || t('card.business')).toUpperCase()}</span>
+        <FavoriteButton businessId={b.id} className="fav-card-heart" />
       </div>
       <div className="card-body">
         <div className="card-top">

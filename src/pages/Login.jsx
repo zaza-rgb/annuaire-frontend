@@ -25,7 +25,12 @@ export default function Login() {
       const res = await api.post('/login', form);
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
-      navigate('/businesses');
+
+      // Chaque rôle arrive sur sa page d'accueil
+      const role = res.data.user?.role;
+      if (role === 'merchant') navigate('/merchant');
+      else if (role === 'admin') navigate('/admin');
+      else navigate('/businesses');
     } catch (error) {
       if (error.response?.status === 422) {
         setErrors(error.response.data.errors);

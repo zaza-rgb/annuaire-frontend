@@ -1,8 +1,22 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Compass, House, LogIn, LogOut, Menu, UserPlus, UserRound, X } from 'lucide-react';
+import {
+  CalendarDays,
+  CalendarPlus,
+  Compass,
+  Heart,
+  House,
+  LogIn,
+  LogOut,
+  Menu,
+  MessageCircle,
+  UserPlus,
+  UserRound,
+  X,
+} from 'lucide-react';
 import api from '../api';
+import { resetFavorites } from '../favorites';
 import Logo from './Logo.jsx';
 import LanguageSwitcher from './LanguageSwitcher.jsx';
 
@@ -47,6 +61,7 @@ export default function Navbar() {
     }
     localStorage.removeItem('token');
     localStorage.removeItem('user');
+    resetFavorites(); // les cœurs d'un compte ne doivent pas rester pour le suivant
     setOpen(false);
     navigate('/login');
   };
@@ -70,16 +85,27 @@ export default function Navbar() {
         <NavLink to="/businesses" className={cls} onClick={close}>
           <Compass size={16} /> {t('nav.explore')}
         </NavLink>
+        <NavLink to="/events" className={cls} onClick={close}>
+          <CalendarDays size={16} /> {t('nav.events')}
+        </NavLink>
         {token && (
-              <>
-                <NavLink to="/profile" className={cls} onClick={close}>
-                  <UserRound size={16} /> {t('nav.profile')}
-                </NavLink>
-                <NavLink to="/messages" className={cls} onClick={close}>
-                  <MessageCircle size={16} /> {t('nav.messages')}
-                </NavLink>
-              </>
-            )}
+          <>
+            <NavLink to="/profile" className={cls} onClick={close}>
+              <UserRound size={16} /> {t('nav.profile')}
+            </NavLink>
+            <NavLink to="/favorites" className={cls} onClick={close}>
+              <Heart size={16} /> {t('favorites.title')}
+            </NavLink>
+            <NavLink to="/messages" className={cls} onClick={close}>
+              <MessageCircle size={16} /> {t('messages.title')}
+            </NavLink>
+          </>
+        )}
+        {user?.role === 'organizer' && (
+          <NavLink to="/organizer/events" className={cls} onClick={close}>
+            <CalendarPlus size={16} /> {t('nav.organizer')}
+          </NavLink>
+        )}
         {user?.role === 'admin' && (
           <NavLink to="/admin" className={cls} onClick={close}>
             {t('nav.admin')}

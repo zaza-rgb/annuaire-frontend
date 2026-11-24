@@ -1,115 +1,102 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Star } from 'lucide-react';
 import api from '../api';
 
-// Props :
-//   businessId  : id du commerce
-//   onSubmitted : (facultatif) appelé après un envoi réussi
-export default function ReviewForm({ businessId, onSubmitted }) {
+// Formulaire d'avis (ligne 16) : POST /businesses/{id}/reviews
+// <ReviewForm businessId={business.id} onSubmitted={reload} />
+export default function ReviewForm({ businessId, onSent, onSubmitted }) {
   const { t } = useTranslation();
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   const [comment, setComment] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
-  const [success, setSuccess] = useState(false);
+  const [sent, setSent] = useState(false);
 
-  const token = localStorage.getItem('token');
-
-  if (!token) {
+  if (!localStorage.getItem('token')) {
     return (
-      <div className="panel">
-        <p>
-          <Link to="/login">{t('reviewForm.loginToReview')}</Link>
-        </p>
+      <div className="panel review-form">
+        <h3>{t('review.title')}</h3>
+        <p className="muted">{t('review.loginRequired')}</p>
+        <Link to="/login" className="btn btn-primary">{t('review.login')}</Link>
       </div>
     );
   }
 
-  if (success) {
-    return <div className="alert-success">{t('reviewForm.success')}</div>;
+  if (sent) {
+    return (
+      <div className="panel review-form">
+        <p className="alert-success" role="status">{t('review.sent')}</p>
+      </div>
+    );
   }
 
-  const submit = async (e) => {
+  async function submit(e) {
     e.preventDefault();
     setError('');
-
     if (rating < 1) {
-      setError(t('reviewForm.errorRating'));
+      setError(t('review.chooseRating'));
       return;
     }
-
-    setLoading(true);
+    setBusy(true);
     try {
       await api.post(`/businesses/${businessId}/reviews`, {
         rating,
         comment: comment.trim() || null,
       });
-      setSuccess(true);
-      if (onSubmitted) onSubmitted();
+      setSent(true);
+      onSent?.();
+      onSubmitted?.(); // la fiche se recharge (BusinessDetail passe onSubmitted={reload})
     } catch (err) {
       const status = err.response?.status;
-      if (status === 409) setError(t('reviewForm.errorAlready'));
-      else if (status === 403) setError(t('reviewForm.errorOwn'));
-      else if (status === 401) setError(t('reviewForm.errorLogin'));
-      else if (status === 422) setError(t('reviewForm.errorInvalid'));
-      else setError(t('reviewForm.errorGeneric'));
+      if (status === 409) setError(t('review.already'));
+      else if (status === 403) setError(t('review.own'));
+      else if (status === 401) setError(t('review.loginRequired'));
+      else setError(err.response?.data?.message || t('review.error'));
     } finally {
-      setLoading(false);
+      setBusy(false);
     }
-  };
+  }
 
+  const shown = hover || rating;
   return (
-    <form className="panel" onSubmit={submit}>
-      <h3>{t('reviewForm.title')}</h3>
+    <form className="panel review-form" onSubmit={submit} noValidate>
+      <h3>{t('review.title')}</h3>
 
       <div className="field">
-        <label>{t('reviewForm.rating')}</label>
-        <div role="radiogroup" aria-label={t('reviewForm.rating')}>
+        <span id="rating-label">{t('review.rating')}</span>
+        <div className="star-picker" role="radiogroup" aria-labelledby="rating-label" onMouseLeave={() => setHover(0)}>
           {[1, 2, 3, 4, 5].map((n) => (
             <button
               key={n}
               type="button"
               role="radio"
               aria-checked={rating === n}
-              aria-label={`${n}`}
-              onClick={() => setRating(n)}
+              aria-label={t('review.ratingValue', { n })}
+              className={n <= shown ? 'on' : ''}
               onMouseEnter={() => setHover(n)}
-              onMouseLeave={() => setHover(0)}
-              style={{
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                fontSize: '1.8rem',
-                lineHeight: 1,
-                padding: '0 2px',
-                color: n <= (hover || rating) ? 'var(--gold)' : 'var(--line)',
-              }}
+              onClick={() => setRating(n)}
             >
-              ★
+              <Star size={26} fill={n <= shown ? 'currentColor' : 'none'} aria-hidden="true" />
             </button>
           ))}
         </div>
       </div>
 
-      <div className="field">
-        <label htmlFor="review-comment">{t('reviewForm.comment')}</label>
+      <label className="field">
+        <span>{t('review.comment')}</span>
         <textarea
-          id="review-comment"
           rows={4}
-          maxLength={2000}
           value={comment}
           onChange={(e) => setComment(e.target.value)}
-          placeholder={t('reviewForm.commentPlaceholder')}
+          placeholder={t('review.commentPlaceholder')}
         />
-      </div>
+      </label>
 
-      {error && <div className="alert-error">{error}</div>}
-
-      <button type="submit" className="btn btn-primary" disabled={loading}>
-        {loading ? t('reviewForm.sending') : t('reviewForm.submit')}
-      </button>
+      {error && <p className="alert-error" role="alert">{error}</p>}
+      <button type="submit" className="btn btn-primary" disabled={busy}>{t('review.submit')}</button>
     </form>
   );
 }

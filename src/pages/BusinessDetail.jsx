@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import api from '../api';
 import { formatRating, stars, storageUrl } from '../utils';
 import ContactButton from '../components/ContactButton.jsx';
+import FavoriteButton from '../components/FavoriteButton.jsx';
 import ReviewForm from '../components/ReviewForm.jsx';
 import ReviewReply from '../components/ReviewReply.jsx';
 
@@ -108,6 +109,7 @@ export default function BusinessDetail() {
               </a>
             )}
             <ContactButton business={b} />
+            <FavoriteButton businessId={b.id} />
           </div>
         </div>
         <div className="hero-art short">
