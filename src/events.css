@@ -264,3 +264,37 @@
 
 .ev-hero .ev-btn-orange { background: #fff; color: #4b263c; }
 .ev-hero .ev-btn-orange:hover:not(:disabled) { background: #f3eaf0; }
+
+/* =====================================================
+   CARTES D'ÉVÉNEMENTS : même style que les cartes de commerces
+   ===================================================== */
+.ev-card {
+  background: #fffcf6;
+  border: 1px solid #efe6d9;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(75,38,60,.06);
+}
+.ev-card:hover { box-shadow: 0 14px 32px rgba(75,38,60,.14); }
+
+/* Titre : sombre, en police à empattements comme les cartes de commerces */
+.ev-card-body { padding: 18px 20px 20px; gap: 8px; }
+.ev-card-body h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.3rem; line-height: 1.2; }
+.ev-card-body h3 a { color: #1f1a17; }
+
+.ev-meta { color: #7a7870; }
+.ev-registered, .ev-places { color: #9a988f; }
+
+/* Bouton : beige avec texte violet (comme « Découvrir ») */
+.ev-card .ev-btn-orange {
+  background: #efe6d9;
+  color: #4b263c;
+  border-color: transparent;
+  border-radius: 14px;
+  padding: 10px 18px;
+  font-weight: 700;
+}
+.ev-card .ev-btn-orange:hover:not(:disabled) { background: #e5d9c8; }
+
+/* Pastille de date : crème, texte violet, comme le cœur de la carte commerce */
+.ev-card-img .ev-badge { background: #fffcf6; color: #4b263c; box-shadow: 0 4px 14px rgba(0,0,0,.18); }
+.ev-card-img .ev-badge small { opacity: .75; }
