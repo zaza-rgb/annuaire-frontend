@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronLeft, ChevronRight, Clock, LocateFixed, MapPin } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, Clock, LocateFixed, MapPin, Search, Users } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import api from '../api';
 import { apiMessage, dateBadge, eventPhotoUrl, timeOnly, toneClass } from '../eventUtils';
 import '../events.css';
+
+const EMPTY = { search: '', city: '', event_category_id: '', language_id: '', date: '' };
 
 export default function Events() {
   const { t, i18n } = useTranslation();
@@ -13,18 +15,13 @@ export default function Events() {
   const [categories, setCategories] = useState([]);
   const [languages, setLanguages] = useState([]);
 
-  const [filters, setFilters] = useState({
-    city: '',
-    event_category_id: '',
-    language_id: '',
-    date_from: '',
-    date_to: '',
-  });
-  const [cityInput, setCityInput] = useState('');
+  const [draft, setDraft] = useState(EMPTY); // ce que la personne tape
+  const [filters, setFilters] = useState(EMPTY); // ce qui est appliqué (bouton Rechercher / Entrée)
+  const [page, setPage] = useState(1);
+
   const [geo, setGeo] = useState(null); // position de l'utilisateur (non enregistrée)
   const [radius, setRadius] = useState(10);
   const [geoMessage, setGeoMessage] = useState('');
-  const [page, setPage] = useState(1);
 
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -36,26 +33,21 @@ export default function Events() {
     api.get('/languages').then((res) => setLanguages(res.data)).catch(() => {});
   }, []);
 
-  // Ville : recherche partielle, on attend la fin de la frappe
-  // (la liste /cities ne couvre pas les événements : champ texte libre)
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setFilters((f) => (f.city === cityInput ? f : { ...f, city: cityInput }));
-      setPage(1);
-    }, 350);
-    return () => clearTimeout(timer);
-  }, [cityInput]);
-
   // Chargement des événements
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
     setError('');
 
-    const params = { page, per_page: 9 };
-    Object.entries(filters).forEach(([key, value]) => {
-      if (value !== '') params[key] = value;
-    });
+    const params = { page, per_page: 8 };
+    if (filters.search) params.search = filters.search;
+    if (filters.city) params.city = filters.city;
+    if (filters.event_category_id) params.event_category_id = filters.event_category_id;
+    if (filters.language_id) params.language_id = filters.language_id;
+    if (filters.date) {
+      params.date_from = filters.date;
+      params.date_to = filters.date;
+    }
     if (geo) {
       params.lat = geo.lat;
       params.lng = geo.lng;
@@ -83,8 +75,11 @@ export default function Events() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters, geo, radius, page]);
 
-  const setFilter = (name, value) => {
-    setFilters((f) => ({ ...f, [name]: value }));
+  const setField = (name, value) => setDraft((d) => ({ ...d, [name]: value }));
+
+  const submit = (e) => {
+    e.preventDefault();
+    setFilters(draft);
     setPage(1);
   };
 
@@ -111,6 +106,14 @@ export default function Events() {
     );
   };
 
+  const resetAll = () => {
+    setDraft(EMPTY);
+    setFilters(EMPTY);
+    setGeo(null);
+    setGeoMessage('');
+    setPage(1);
+  };
+
   const events = result?.data || [];
   const total = result?.total ?? 0;
 
@@ -130,102 +133,112 @@ export default function Events() {
         </div>
       </section>
 
-      <div className="ev-wrap">
-        <div className="ev-filters">
-          <div className="ev-field">
-            <label htmlFor="ev-city">{t('events.city', 'Ville')}</label>
+      <div className="ev-wrap ev-wrap-wide">
+        <form className="ev-search" onSubmit={submit} role="search">
+          <div className="ev-search-input">
+            <Search size={18} />
             <input
-              id="ev-city"
-              placeholder={t('events.cityPlaceholder', 'Ex. São Paulo')}
-              value={cityInput}
-              onChange={(e) => setCityInput(e.target.value)}
+              type="search"
+              aria-label={t('events.searchPlaceholder', 'Rechercher un événement…')}
+              placeholder={t('events.searchPlaceholder', 'Rechercher un événement…')}
+              value={draft.search}
+              onChange={(e) => setField('search', e.target.value)}
             />
           </div>
-          <div className="ev-field">
-            <label htmlFor="ev-category">{t('events.category', 'Catégorie')}</label>
-            <select
-              id="ev-category"
-              value={filters.event_category_id}
-              onChange={(e) => setFilter('event_category_id', e.target.value)}
-            >
-              <option value="">{t('events.allCategories', 'Toutes les catégories')}</option>
-              {categories.map((c) => (
-                <option key={c.id} value={c.id}>
-                  {c.name}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="ev-field">
-            <label htmlFor="ev-language">{t('events.language', 'Langue')}</label>
-            <select
-              id="ev-language"
-              value={filters.language_id}
-              onChange={(e) => setFilter('language_id', e.target.value)}
-            >
-              <option value="">{t('events.allLanguages', 'Toutes les langues')}</option>
-              {languages.map((l) => (
-                <option key={l.id} value={l.id}>
-                  {l.name}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="ev-field">
-            <label htmlFor="ev-from">{t('events.dateFrom', 'À partir du')}</label>
-            <input
-              id="ev-from"
-              type="date"
-              value={filters.date_from}
-              onChange={(e) => setFilter('date_from', e.target.value)}
-            />
-          </div>
-          <div className="ev-field">
-            <label htmlFor="ev-to">{t('events.dateTo', "Jusqu'au")}</label>
-            <input
-              id="ev-to"
-              type="date"
-              value={filters.date_to}
-              onChange={(e) => setFilter('date_to', e.target.value)}
-            />
-          </div>
-          <button className={`ev-btn ${geo ? 'ev-btn-plum' : 'ev-btn-outline'}`} onClick={locate}>
-            <LocateFixed size={17} /> {geo ? t('events.nearMeOn', 'Autour de moi : activé') : t('events.nearMe', 'Autour de moi')}
-          </button>
-        </div>
 
-        {geo && (
-          <div className="ev-field ev-radius" style={{ maxWidth: 260 }}>
-            <label htmlFor="ev-radius">{t('events.radius', 'Rayon de recherche')}</label>
-            <select
-              id="ev-radius"
-              value={radius}
-              onChange={(e) => {
-                setRadius(Number(e.target.value));
-                setPage(1);
-              }}
-            >
-              {[5, 10, 25, 50, 100].map((r) => (
-                <option key={r} value={r}>
-                  {r} km
-                </option>
-              ))}
-            </select>
+          <input
+            className="ev-city"
+            aria-label={t('events.cityPlaceholder', 'Ville')}
+            placeholder={t('events.cityPlaceholder', 'Ville')}
+            value={draft.city}
+            onChange={(e) => setField('city', e.target.value)}
+          />
+
+          <select
+            aria-label={t('events.language', 'Langue')}
+            value={draft.language_id}
+            onChange={(e) => setField('language_id', e.target.value)}
+          >
+            <option value="">{t('events.allLanguages', 'Toutes les langues')}</option>
+            {languages.map((l) => (
+              <option key={l.id} value={l.id}>
+                {l.name}
+              </option>
+            ))}
+          </select>
+
+          <select
+            aria-label={t('events.category', 'Catégorie')}
+            value={draft.event_category_id}
+            onChange={(e) => setField('event_category_id', e.target.value)}
+          >
+            <option value="">{t('events.allCategories', 'Toutes les catégories')}</option>
+            {categories.map((c) => (
+              <option key={c.id} value={c.id}>
+                {c.name}
+              </option>
+            ))}
+          </select>
+
+          <input
+            className="ev-date"
+            type="date"
+            aria-label={t('events.date', 'Date')}
+            value={draft.date}
+            onChange={(e) => setField('date', e.target.value)}
+          />
+
+          <button type="submit" className="ev-btn ev-btn-green">
+            <Search size={17} /> {t('events.searchBtn', 'Rechercher')}
+          </button>
+
+          <button
+            type="button"
+            className={`ev-btn ${geo ? 'ev-btn-plum' : 'ev-btn-outline'} ev-near`}
+            onClick={locate}
+            aria-pressed={!!geo}
+          >
+            <LocateFixed size={17} />{' '}
+            {geo ? t('events.nearMeOn', 'Autour de moi : activé') : t('events.nearMe', 'Autour de moi')}
+          </button>
+        </form>
+
+        {(geo || geoMessage) && (
+          <div className="ev-geo-row">
+            {geo && (
+              <label className="ev-radius-inline">
+                {t('events.radius', 'Rayon de recherche')}
+                <select
+                  value={radius}
+                  onChange={(e) => {
+                    setRadius(Number(e.target.value));
+                    setPage(1);
+                  }}
+                >
+                  {[5, 10, 25, 50, 100].map((r) => (
+                    <option key={r} value={r}>
+                      {r} km
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )}
+            {geoMessage && <p className="ev-alert ev-alert-error">{geoMessage}</p>}
           </div>
         )}
-        {geoMessage && <p className="ev-alert ev-alert-error">{geoMessage}</p>}
 
         <div className="ev-title-row" id="ev-list">
           <h2>{t('events.upcoming', 'Événements à venir')}</h2>
+          <button type="button" className="ev-viewall" onClick={resetAll}>
+            {t('events.viewAll', 'Voir tous')} <ArrowRight size={16} />
+          </button>
         </div>
 
         {error && <p className="ev-alert ev-alert-error">{error}</p>}
 
         {!error && (
           <p className="ev-count">
-            {loading
-              ? t('events.searching', 'Recherche en cours…')
-              : t('events.count', { total, defaultValue: '{{total}} événement(s) trouvé(s)' })}
+            {loading ? t('events.searching', 'Recherche en cours…') : t('events.count', { count: total })}
           </p>
         )}
 
@@ -238,11 +251,14 @@ export default function Events() {
             const badge = dateBadge(ev.starts_at, locale);
             const photo = eventPhotoUrl(ev.photo_path);
             const full = ev.places_left === 0;
+            const registered = ev.registered_count ?? ev.registrations_count ?? ev.attendees_count;
             return (
               <article key={ev.id} className="ev-card">
-                <div
+                <Link
+                  to={`/events/${ev.id}`}
                   className={`ev-card-img ${photo ? '' : toneClass(ev)}`}
                   style={photo ? { backgroundImage: `url(${photo})` } : undefined}
+                  aria-label={ev.title}
                 >
                   {badge && (
                     <div className="ev-badge">
@@ -251,18 +267,14 @@ export default function Events() {
                       <small>{badge.month}</small>
                     </div>
                   )}
-                  {ev.category?.name && <span className="ev-cat">{ev.category.name}</span>}
-                </div>
+                </Link>
                 <div className="ev-card-body">
                   <h3>
                     <Link to={`/events/${ev.id}`}>{ev.title}</Link>
                   </h3>
                   <p className="ev-meta">
                     <MapPin size={15} />
-                    <span>
-                      {ev.city}
-                      {ev.address ? ` · ${ev.address}` : ''}
-                    </span>
+                    <span>{ev.city}</span>
                   </p>
                   <p className="ev-meta">
                     <Clock size={15} />
@@ -272,11 +284,17 @@ export default function Events() {
                     </span>
                   </p>
                   <div className="ev-card-foot">
-                    <span className={`ev-places ${full ? 'is-full' : ''}`}>
-                      {full
-                        ? t('events.full', 'Complet')
-                        : t('events.placesLeft', { n: ev.places_left, defaultValue: '{{n}} place(s) restante(s)' })}
-                    </span>
+                    {registered != null ? (
+                      <span className="ev-registered">
+                        <Users size={15} /> {t('events.registered', { count: registered })}
+                      </span>
+                    ) : (
+                      <span className={`ev-places ${full ? 'is-full' : ''}`}>
+                        {full
+                          ? t('events.full', 'Complet')
+                          : t('events.placesLeft', { n: ev.places_left, defaultValue: '{{n}} place(s) restante(s)' })}
+                      </span>
+                    )}
                     <Link className="ev-btn ev-btn-orange ev-btn-sm" to={`/events/${ev.id}`}>
                       {full ? t('events.see', 'Voir') : t('events.register', "S'inscrire")}
                     </Link>
