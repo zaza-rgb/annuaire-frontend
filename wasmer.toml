@@ -1,0 +1,11 @@
+[package]
+name = "annuaire-frontend"
+version = "1.0.0"
+description = "Frontend React Vite pour l'annuaire Afroponte"
+
+[[services]]
+name = "frontend"
+protocol = "http"
+
+[services.ports]
+port = 80
