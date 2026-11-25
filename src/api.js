@@ -2,7 +2,7 @@ import axios from 'axios';
 import i18n from './i18n';
 
 const api = axios.create({
-  baseURL: 'https://annuaire-backend.wasmer.app/api/v1',
+  baseURL: import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api/v1',
   headers: { Accept: 'application/json' },
 });
 
