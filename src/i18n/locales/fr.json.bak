@@ -1,0 +1,741 @@
+{
+  "languages": {
+    "choose": "Choisir une langue",
+    "loadError": "Impossible de charger les langues."
+  },
+  "nav": {
+    "home": "Accueil",
+    "explore": "Explorer",
+    "profile": "Mon profil",
+    "logout": "Déconnexion",
+    "login": "Connexion",
+    "signup": "Créer un compte",
+    "admin": "Administration",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu",
+     "events": "Événements",
+"organizer": "Mes événements organisés",
+     "guide": "Guide d'utilisation",
+     "dashboard": "Tableau de bord",
+    "logoutQuestion": "Voulez-vous vous déconnecter ?"
+    
+  },
+    "events": {
+    "eyebrow": "Rencontres",
+    "heroA": "Découvre les",
+    "heroB": "événements",
+    "heroC": "de la communauté africaine",
+    "lead": "Fêtes, rencontres, cultes, sport : retrouve ta communauté près de chez toi.",
+    "explore": "Explorer les événements",
+    "searchPlaceholder": "Rechercher un événement…",
+    "cityPlaceholder": "Ville",
+    "language": "Langue",
+    "category": "Catégorie",
+    "allLanguages": "Toutes les langues",
+    "allCategories": "Toutes les catégories",
+    "date": "Date",
+    "searchBtn": "Rechercher",
+    "nearMe": "Autour de moi",
+    "nearMeOn": "Autour de moi : activé",
+    "radius": "Rayon de recherche",
+    "geoUnavailable": "La géolocalisation n'est pas disponible sur ce navigateur.",
+    "geoDenied": "Impossible d'obtenir ta position. Autorise la localisation dans le navigateur.",
+    "upcoming": "Événements à venir",
+    "viewAll": "Voir tous",
+    "searching": "Recherche en cours…",
+    "count_one": "{{count}} événement trouvé",
+    "count_other": "{{count}} événements trouvés",
+    "empty": "Aucun événement. Essaie une autre recherche.",
+    "loadError": "Impossible de charger les événements.",
+    "registered_one": "{{count}} inscrit",
+    "registered_other": "{{count}} inscrits",
+    "placesLeft": "{{n}} place(s) restante(s)",
+    "full": "Complet",
+    "see": "Voir",
+    "register": "S'inscrire"
+  },
+  "home": {
+    "eyebrow": "L'annuaire afro du Brésil",
+    "titleLine": "Vivez la richesse",
+    "titleAccent": "de l'Afrique au Brésil.",
+    "intro": "Restaurants, boutiques, salons de coiffure et ateliers de couture africains et afro-descendants. Des lieux vivants, et des rencontres qui commencent près de chez vous.",
+    "searchPlaceholder": "Un restaurant, une boutique, un quartier…",
+    "searchAria": "Rechercher un commerce",
+    "card1Title": "Carte interactive",
+    "card1Text": "Trouvez des lieux autour de vous",
+    "card2Title": "Avis modérés",
+    "card2Text": "Des fiches fiables et vérifiées",
+    "card3Title": "Messagerie directe",
+    "card3Text": "Écrivez au commerce en un clic",
+    "scrollCue": "Voir plus",
+    "universEyebrow": "Parcourir par catégorie",
+    "universTitle": "Tout ce qui fait vibrer l'Afrique, près de chez vous.",
+    "discoverTitle": "Découvrir",
+    "discoverText": "Un annuaire par ville, catégorie et pays d'origine, avec photos, horaires et avis.",
+    "connectTitle": "Échanger",
+    "connectText": "Contactez directement les commerces, gardez vos favoris et retrouvez vos conversations.",
+    "growTitle": "Faire grandir",
+    "growText": "Fiches gratuites, profils vivants et une modération qui protège la qualité.",
+    "storyEyebrow": "Un commerce mérite d'être trouvé",
+    "storyTitle": "Votre savoir-faire a sa place sur la carte.",
+    "storyText": "Créez votre vitrine et faites connaître votre activité au-delà de votre quartier.",
+    "storyCta": "Présenter mon activité"
+  },
+  "footer": {
+    "tagline": "Les meilleures adresses afro, à portée de votre quartier.",
+    "bridge": "Un pont entre l'Afrique et le Brésil.",
+    "categories": "Restaurants · Boutiques · Coiffure · Couture",
+    "copyright": "© {{year}} afroponte. Tous droits réservés.",
+    "listBusiness": "Inscrire un commerce",
+    "login": "Connexion",
+    "colExplore": "Explorer",
+    "colMerchants": "Commerçants",
+    "colSite": "AfroPonte",
+    "about": "À propos",
+    "contact": "Contact",
+    "privacy": "Confidentialité",
+    "terms": "Conditions d’utilisation",
+    "legal": "Mentions légales",
+    "backToTop": "Retour en haut",
+    "whatsapp": "WhatsApp"
+  },
+  "univers": {
+    "restaurants": {
+      "title": "Restaurants",
+      "text": "Les saveurs d'Afrique, du maffé au thieboudienne."
+    },
+    "shops": {
+      "title": "Boutiques",
+      "text": "Tissus, épices, produits du pays et mode."
+    },
+    "beauty": {
+      "title": "Coiffure et beauté",
+      "text": "Tresses, soins et salons spécialisés."
+    },
+    "craft": {
+      "title": "Couture et artisanat",
+      "text": "Wax, sur-mesure et savoir-faire d'atelier."
+    }
+  },
+  "band": {
+    "culture": "Culture",
+    "community": "Communauté"
+  },
+  "splash": {
+    "africa": "Afrique",
+    "brazil": "Brésil"
+  },
+  "common": {
+    "error": "Une erreur est survenue. Veuillez réessayer."
+  },
+  "auth": {
+    "login": {
+      "eyebrow": "Heureux de vous revoir",
+      "title": "Retrouvez le cercle.",
+      "lead": "Connectez-vous pour retrouver vos favoris et vos conversations.",
+      "email": "Adresse e-mail",
+      "emailPlaceholder": "vous@exemple.com",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "submitting": "Connexion…",
+      "noAccount": "Pas encore de compte ?",
+      "createAccount": "Créer un compte"
+    },
+    "register": {
+      "eyebrow": "Rejoignez le réseau",
+      "title": "Créez votre espace.",
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "E-mail",
+      "phone": "Téléphone (facultatif)",
+      "password": "Mot de passe",
+      "confirm": "Confirmer le mot de passe",
+      "language": "Langue préférée",
+      "accountType": "Je suis",
+      "typeUser": "Un particulier",
+      "typeMerchant": "Un commerçant",
+      "submit": "Créer mon compte",
+      "submitting": "Envoi…",
+      "already": "Déjà inscrit ?",
+      "login": "Se connecter",
+      "languagesError": "Impossible de charger les langues. Vérifiez que l'API est lancée."
+    }
+  },
+  "profile": {
+    "eyebrow": "Paramètres",
+    "title": "Mon profil",
+    "loading": "Chargement…",
+    "loadError": "Impossible de charger le profil.",
+    "name": "Nom",
+    "phone": "Téléphone",
+    "language": "Langue préférée",
+    "save": "Enregistrer",
+    "saving": "Enregistrement…",
+    "saved": "Profil enregistré.",
+    "saveError": "Enregistrement impossible. Veuillez réessayer.",
+    "accountInfo": "Informations du compte",
+    "readonly": "Ces informations ne peuvent pas être modifiées ici.",
+    "email": "E-mail",
+    "accountType": "Type de compte",
+    "status": "Statut",
+    
+    "edit": "Modifier",
+    "notProvided": "Non renseigné",
+    "cancel": "Annuler",
+    "back": "Retour"
+  },
+  "roles": {
+    "user": "Particulier",
+    "merchant": "Commerçant",
+    "admin": "Administrateur"
+  },
+  "status": {
+    "active": "Actif",
+    "pending": "En attente",
+    "suspended": "Suspendu"
+  },
+  "detail": {
+    "back": "← Retour à l'annuaire",
+    "loading": "Chargement…",
+    "notFound": "Cette fiche est introuvable.",
+    "loadError": "Impossible de charger la fiche.",
+    "call": "Appeler",
+    "fallbackCountry": "Afrique et diaspora",
+    "artNote": "Un lieu à découvrir",
+    "contact": "Coordonnées",
+    "origin": "Pays d'origine",
+    "languages": "Langues",
+    "hours": "Horaires d'ouverture",
+    "noHours": "Horaires non renseignés.",
+    "closed": "Fermé",
+    "photos": "Photos",
+    "photoAlt": "Photo de {{name}}",
+    "community": "Ce que dit la communauté",
+    "noReviews": "Aucun avis pour le moment.",
+    "member": "Un membre"
+  },
+  "days": {
+    "mon": "Lundi",
+    "tue": "Mardi",
+    "wed": "Mercredi",
+    "thu": "Jeudi",
+    "fri": "Vendredi",
+    "sat": "Samedi",
+    "sun": "Dimanche"
+  },
+  "map": {
+    "you_are_here": "Vous êtes ici",
+    "view_business": "Voir la fiche",
+    "not_located": "{{n}} commerce(s) sans position ne sont pas affichés sur la carte."
+  },
+  "explore": {
+    "eyebrow": "L'annuaire",
+    "title": "Explorer les adresses",
+    "lead": "Des lieux indépendants, choisis pour leurs racines afro.",
+    "search": "Rechercher",
+    "searchPlaceholder": "Nom, activité, quartier…",
+    "city": "Ville",
+    "allCities": "Toutes les villes",
+    "country": "Pays d'origine",
+    "allCountries": "Tous les pays",
+    "all": "Tout",
+    "viewList": "Liste",
+    "viewMap": "Carte",
+    "nearMe": "Autour de moi",
+    "nearMeOn": "Autour de moi : activé",
+    "radiusLabel": "Rayon de recherche",
+    "radiusOption": "Dans un rayon de {{km}} km",
+    "geoUnavailable": "La géolocalisation n'est pas disponible dans ce navigateur.",
+    "geoDenied": "Impossible d'obtenir votre position. Autorisez la localisation dans votre navigateur.",
+    "loadError": "Impossible de charger les commerces. Vérifiez que l'API est lancée.",
+    "searching": "Recherche…",
+    "found_one": "{{count}} adresse trouvée",
+    "found_other": "{{count}} adresses trouvées",
+    "noResults": "Aucun résultat. Essayez une autre recherche.",
+    "mapLimit": "Les {{n}} premiers commerces sont affichés. Affinez votre recherche pour voir les autres.",
+    "previous": "← Précédent",
+    "next": "Suivant →",
+    "page": "Page {{current}} sur {{last}}"
+  },
+  "card": {
+    "discover": "Découvrir",
+    "noReviews": "Aucun avis",
+    "reviews_one": "{{count}} avis",
+    "reviews_other": "{{count}} avis",
+    "distance": "à {{km}} km"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "text": "Cette page n'existe pas ou a été déplacée."
+  },
+  "favorites": {
+    "title": "Mes favoris",
+    "count_one": "{{count}} favori",
+    "count_other": "{{count}} favoris",
+    "emptyTitle": "Aucun favori pour le moment",
+    "emptyText": "Touchez le cœur sur une fiche pour la retrouver ici plus tard.",
+    "explore": "Explorer les commerces",
+    "add": "Ajouter aux favoris",
+    "remove": "Retirer des favoris",
+    "loadError": "Vos favoris n'ont pas pu être chargés. Réessayez dans un instant.",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "page": "Page {{current}} sur {{last}}"
+  },
+  "review": {
+    "title": "Laisser un avis",
+    "rating": "Votre note",
+    "ratingValue": "{{n}} sur 5",
+    "comment": "Votre commentaire (facultatif)",
+    "commentPlaceholder": "Ce que vous avez aimé, ce qui pourrait être mieux…",
+    "submit": "Envoyer mon avis",
+    "sent": "Merci ! Votre avis apparaîtra une fois validé.",
+    "chooseRating": "Choisissez une note de 1 à 5.",
+    "already": "Vous avez déjà laissé un avis sur ce commerce.",
+    "own": "Vous ne pouvez pas noter votre propre fiche.",
+    "loginRequired": "Connectez-vous pour laisser un avis.",
+    "login": "Se connecter",
+    "error": "Votre avis n'a pas pu être envoyé. Réessayez."
+  },
+  "messages": {
+    "title": "Messagerie",
+    "empty": "Aucune conversation",
+    "emptyText": "Ouvrez la fiche d'un commerce et choisissez « Envoyer un message » pour lui écrire.",
+    "select": "Choisissez une conversation pour lire ses messages.",
+    "noMessages": "Aucun message pour le moment. Écrivez le premier.",
+    "placeholder": "Écrire un message…",
+    "send": "Envoyer",
+    "back": "Retour aux conversations",
+    "unread_one": "{{count}} message non lu",
+    "unread_other": "{{count}} messages non lus",
+    "loadError": "Les messages n'ont pas pu être chargés. Réessayez dans un instant.",
+    "sendError": "Le message n'a pas pu être envoyé. Vérifiez son contenu et réessayez.",
+    "contact": "Envoyer un message",
+    "contactNoOwner": "Ce commerce n'a pas encore de propriétaire inscrit.",
+    "contactOwn": "C'est votre propre fiche."
+  },
+  "forbidden": {
+    "title": "Accès refusé",
+    "code": "Erreur 403",
+    "text": "Vous n'avez pas l'autorisation de consulter cette page.",
+    "home": "Retour à l'accueil",
+    "back": "Page précédente"
+  },
+  "admin": {
+    "title": "Administration",
+    "nav": {
+      "dashboard": "Tableau de bord",
+      "businesses": "Fiches",
+      "reviews": "Avis",
+      "photos": "Photos",
+      "reports": "Signalements",
+      "claims": "Revendications",
+      "users": "Comptes",
+      "categories": "Catégories",
+      "countries": "Pays",
+      "languages": "Langues"
+    },
+    "actionError": "L'action a échoué. Veuillez réessayer.",
+    "dashboard": {
+      "loadError": "Impossible de charger les statistiques."
+    },
+    "prev": "Précédent",
+    "next": "Suivant",
+    "page": "Page {{current}} sur {{last}}",
+    "queue": {
+      "title": {
+        "businesses": "Fiches à valider",
+        "reviews": "Avis à modérer",
+        "photos": "Photos à modérer",
+        "reports": "Signalements",
+        "claims": "Revendications"
+      },
+      "approve": "Valider",
+      "reject": "Refuser",
+      "resolve": "Résoudre",
+      "dismiss": "Rejeter",
+      "accept": "Accepter",
+      "by": "Auteur",
+      "on": "Fiche",
+      "owner": "Propriétaire",
+      "proposer": "Proposée par",
+      "empty": "Rien à traiter pour le moment.",
+      "filter": "Statut",
+      "loadError": "Impossible de charger la liste.",
+      "noText": "(sans texte)",
+      "photoAlt": "Photo envoyée"
+    },
+    "catalog": {
+      "title": {
+        "categories": "Catégories",
+        "countries": "Pays d'origine",
+        "languages": "Langues"
+      },
+      "add": "Ajouter",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "code": "Code",
+      "name": "Nom",
+      "confirm": "Supprimer « {{name}} » ?",
+      "empty": "Aucun élément pour le moment.",
+      "loadError": "Impossible de charger la liste.",
+      "error": "L'opération a échoué."
+    },
+    "roles": {
+      "user": "Particulier",
+      "merchant": "Commerçant",
+      "admin": "Administrateur"
+    },
+    "stats": {
+      "users": "Utilisateurs",
+      "total": "Total",
+      "by_role": "Par rôle",
+      "suspended": "Suspendus",
+      "businesses": "Fiches",
+      "pending": "En attente",
+      "approved": "Validées",
+      "rejected": "Refusées",
+      "reviews": "Avis",
+      "photos": "Photos",
+      "claims": "Revendications",
+      "reports_open": "Signalements ouverts",
+      "conversations": "Conversations",
+      "messages": "Messages",
+      "user": "Particuliers",
+      "merchant": "Commerçants",
+      "admin": "Administrateurs"
+    },
+    "status": {
+      "pending": "En attente",
+      "approved": "Validé",
+      "rejected": "Refusé",
+      "open": "Ouvert",
+      "resolved": "Résolu",
+      "dismissed": "Rejeté",
+      "active": "Actif",
+      "suspended": "Suspendu"
+    },
+    "users": {
+      "title": "Comptes",
+      "all": "Tous",
+      "search": "Rechercher par nom ou e-mail",
+      "count": "{{count}} compte(s)",
+      "name": "Nom",
+      "email": "E-mail",
+      "role": "Rôle",
+      "created": "Inscription",
+      "suspend": "Suspendre",
+      "reactivate": "Réactiver",
+      "confirmSuspend": "Suspendre ce compte ? L'utilisateur sera déconnecté.",
+      "self": "Votre compte",
+      "locked": "Compte administrateur protégé"
+    }
+  },
+  "pages": {
+    "backHome": "Retour à l’accueil",
+    "updated": "Dernière mise à jour : {{date}}",
+    "toComplete": "(à compléter)",
+    "contactEmail": "Écrire un e-mail",
+    "contactWhatsapp": "Écrire sur WhatsApp",
+    "about": {
+      "title": "À propos d’AfroPonte",
+      "intro": "AfroPonte est un pont entre l’Afrique et le Brésil : un annuaire qui aide à trouver, près de chez soi, les restaurants, boutiques, salons de coiffure et ateliers de couture africains.",
+      "sections": [
+        {
+          "h": "Notre mission",
+          "p": "Rendre visibles les commerces africains et afro-descendants du Brésil, et faciliter la rencontre entre ceux qui les tiennent et ceux qui les cherchent : touristes, étudiants, migrants, hommes d’affaires, familles."
+        },
+        {
+          "h": "Ce que vous pouvez faire",
+          "p": "Chercher un commerce par ville, catégorie ou pays d’origine, le voir sur la carte, enregistrer vos favoris, laisser un avis, et écrire directement à un commerçant depuis l’application, sans passer par WhatsApp."
+        },
+        {
+          "h": "Pour les commerçants",
+          "p": "Présenter son activité est gratuit. Chaque fiche est vérifiée avant sa publication, et les avis et photos sont modérés pour garder un annuaire fiable."
+        },
+        {
+          "h": "Une communauté",
+          "p": "AfroPonte grandit avec ses utilisateurs : proposez un commerce qui manque, signalez une information fausse, partagez votre expérience."
+        },
+        {
+          "h": "Trois langues",
+          "p": "Le site est disponible en français, en anglais et en portugais."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Nous contacter",
+      "intro": "Une question, une suggestion, un commerce à ajouter ou un problème à signaler ? Écrivez-nous.",
+      "sections": [
+        {
+          "h": "Pour les utilisateurs",
+          "p": "Pour contacter un commerçant, utilisez la messagerie de l’application depuis sa fiche."
+        },
+        {
+          "h": "Pour les commerçants",
+          "p": "Pour inscrire ou revendiquer votre activité, créez un compte commerçant. Besoin d’aide ? Écrivez-nous."
+        },
+        {
+          "h": "Signaler un problème",
+          "p": "Une fiche incorrecte ou un contenu inapproprié ? Utilisez le bouton de signalement, ou écrivez-nous en indiquant la page concernée."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "intro": "Cette page explique quelles données AfroPonte collecte, pourquoi, et quels sont vos droits, conformément à la loi brésilienne de protection des données (LGPD, loi n° 13.709/2018).",
+      "sections": [
+        {
+          "h": "Données que nous collectons",
+          "p": "Compte : nom, adresse e-mail, mot de passe (chiffré), téléphone (facultatif), langue et type de compte. Utilisation : favoris, avis, photos et messages échangés dans l’application. Position : uniquement si vous utilisez « Près de moi », pour calculer les commerces proches."
+        },
+        {
+          "h": "Pourquoi nous les utilisons",
+          "p": "Pour créer et sécuriser votre compte, afficher l’annuaire, permettre la messagerie, modérer les contenus et améliorer le service. Nous ne vendons pas vos données."
+        },
+        {
+          "h": "Vos messages",
+          "p": "Les conversations sont privées. Seules les conversations signalées peuvent être consultées par l’équipe de modération, pour traiter le signalement."
+        },
+        {
+          "h": "Partage des données",
+          "p": "Vos données ne sont partagées qu’avec les prestataires techniques nécessaires au fonctionnement du site (hébergement, envoi d’e-mails), ou si la loi l’exige. Les avis et photos que vous publiez sont visibles par les autres visiteurs."
+        },
+        {
+          "h": "Stockage sur votre appareil",
+          "p": "Le site enregistre dans votre navigateur votre langue et votre session de connexion. À ce jour, il n’utilise pas de cookies publicitaires."
+        },
+        {
+          "h": "Durée de conservation",
+          "p": "Vos données sont conservées tant que votre compte est actif. Vous pouvez demander la suppression de votre compte et de vos données à tout moment."
+        },
+        {
+          "h": "Vos droits",
+          "p": "Vous pouvez demander l’accès, la correction, l’export ou la suppression de vos données, et retirer votre consentement. Écrivez à {{email}}."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Conditions d’utilisation",
+      "intro": "En utilisant AfroPonte, vous acceptez les règles ci-dessous.",
+      "sections": [
+        {
+          "h": "Le service",
+          "p": "AfroPonte est un annuaire gratuit de commerces africains au Brésil, avec une messagerie intégrée. Nous ne vendons aucun produit ni service nous-mêmes."
+        },
+        {
+          "h": "Votre compte",
+          "p": "Vous êtes responsable de votre compte et de la confidentialité de votre mot de passe. Donnez des informations exactes. Un compte peut être suspendu en cas d’abus."
+        },
+        {
+          "h": "Fiches des commerçants",
+          "p": "Les commerçants sont responsables de l’exactitude de leurs informations (adresse, horaires, tarifs). Chaque fiche est validée par l’équipe avant publication, et peut être refusée ou retirée si elle est fausse ou trompeuse."
+        },
+        {
+          "h": "Avis, photos et messages",
+          "p": "Publiez uniquement des contenus honnêtes, qui vous appartiennent et respectent les autres. Sont interdits : insultes, harcèlement, discrimination, contenus illégaux, faux avis et spam. Les contenus peuvent être modérés ou supprimés."
+        },
+        {
+          "h": "Signalements",
+          "p": "Vous pouvez signaler une fiche, un avis, une photo ou un message. L’équipe les examine et peut suspendre les comptes concernés."
+        },
+        {
+          "h": "Responsabilité",
+          "p": "Les informations des fiches viennent des commerçants et des utilisateurs : nous ne pouvons pas garantir qu’elles soient toujours exactes. Les échanges et achats entre utilisateurs et commerçants se font sous leur seule responsabilité."
+        },
+        {
+          "h": "Modifications",
+          "p": "Nous pouvons modifier ces conditions. La date de mise à jour figure en bas de page."
+        }
+      ]
+    },
+    "legal": {
+      "title": "Mentions légales",
+      "intro": "Informations sur l’éditeur du site AfroPonte.",
+      "sections": [
+        {
+          "h": "Éditeur",
+          "p": "Le site est édité par {{owner}}. Contact : {{email}}."
+        },
+        {
+          "h": "Hébergement",
+          "p": "Le site est hébergé par un prestataire d’hébergement web ; ses coordonnées sont communiquées sur demande à {{email}}."
+        },
+        {
+          "h": "Propriété intellectuelle",
+          "p": "La marque AfroPonte, le logo, la conception du site et ses textes sont protégés. Les photos et textes publiés par les utilisateurs et les commerçants restent leur propriété ; en les publiant, ils autorisent AfroPonte à les afficher sur le site."
+        },
+        {
+          "h": "Données personnelles",
+          "p": "Le traitement de vos données est décrit dans la politique de confidentialité."
+        },
+        {
+          "h": "Signaler un contenu",
+          "p": "Pour signaler un contenu illicite, utilisez le bouton de signalement ou écrivez à {{email}}."
+        }
+      ]
+    }
+  },
+
+  
+  
+ 
+  "merchant": {
+    "nav": {
+      "dashboard": "Mes commerces",
+      "add": "Inscrire un commerce",
+      "messages": "Messages"
+    },
+    "status": {
+      "all": "Toutes",
+      "pending": "En attente",
+      "approved": "Validée",
+      "rejected": "Refusée"
+    },
+    "dashboard": {
+      "title": "Mes commerces",
+      "subtitle": "Gérez vos fiches, vos horaires et vos photos.",
+      "add": "Inscrire mon commerce",
+      "loading": "Chargement…",
+      "loadError": "Impossible de charger vos fiches.",
+      "emptyTitle": "Vous n'avez pas encore de commerce",
+      "emptyText": "Inscrivez votre restaurant, boutique ou salon pour être trouvé par la communauté.",
+      "emptyFilter": "Aucune fiche dans cette catégorie.",
+      "pendingNote": "Votre fiche est en cours de validation par l'équipe. Elle sera visible dès qu'elle sera approuvée.",
+      "rejectedNote": "Votre fiche a été refusée. Modifiez-la puis contactez-nous si besoin.",
+      "edit": "Modifier",
+      "reviews": "Avis",
+      "view": "Voir la fiche"
+    },
+    "form": {
+      "eyebrow": "Nouveau commerce",
+      "title": "Inscrire mon commerce",
+      "intro": "Renseignez les informations de base. Les langues parlées et les horaires se règlent ensuite sur la page de modification.",
+      "name": "Nom du commerce",
+      "category": "Catégorie",
+      "country": "Pays d'origine",
+      "city": "Ville",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "description": "Description",
+      "pricing": "Tarifs",
+      "pricingPlaceholder": "Ex. : plat du jour 25 R$, coupe 40 R$",
+      "mapTitle": "Position sur la carte",
+      "mapHint": "Cliquez sur la carte pour placer votre commerce (facultatif).",
+      "choose": "Choisir…",
+      "submit": "Envoyer pour validation",
+      "submitting": "Envoi en cours…",
+      "loadError": "Impossible de charger les listes.",
+      "error": "Une erreur est survenue. Vérifiez les champs et réessayez.",
+      "forbidden": "Votre compte n'est pas autorisé à inscrire un commerce.",
+      "geoError": "Impossible de récupérer votre position.",
+      "useMyPosition": "Utiliser ma position",
+      "clearPosition": "Effacer la position"
+    },
+    "edit": {
+      "eyebrow": "Modifier ma fiche",
+      "notFound": "Fiche introuvable.",
+      "forbidden": "Vous n'avez pas accès à cette fiche.",
+      "loadError": "Impossible de charger la fiche.",
+      "back": "Retour",
+      "viewPublic": "Voir la page publique",
+      "created": "Fiche créée. Elle sera visible après validation par l'équipe.",
+      "infoTitle": "Informations et langues",
+      "fixedNote": "Le nom, la catégorie, la ville et l'adresse ne se modifient pas ici.",
+      "languagesTitle": "Langues parlées",
+      "save": "Enregistrer",
+      "saving": "Enregistrement…",
+      "saved": "Modifications enregistrées.",
+      "saveError": "Enregistrement impossible. Réessayez.",
+      "hoursTitle": "Horaires d'ouverture",
+      "hoursHint": "Ajoutez un ou plusieurs créneaux par jour. Un jour sans créneau est fermé.",
+      "closed": "Fermé",
+      "opens": "Ouverture",
+      "closes": "Fermeture",
+      "addSlot": "Ajouter un créneau",
+      "removeSlot": "Retirer",
+      "saveHours": "Enregistrer les horaires",
+      "hoursSaved": "Horaires enregistrés.",
+      "hoursIncomplete": "Chaque créneau doit avoir une heure d'ouverture et de fermeture.",
+      "hoursOrder": "L'heure de fermeture doit être après l'heure d'ouverture.",
+      "hoursOverlap": "Deux créneaux d'un même jour se chevauchent.",
+      "photosTitle": "Photos",
+      "photosLocked": "Vous pourrez ajouter des photos dès que votre fiche sera validée.",
+      "photosHint": "Formats JPG, PNG ou WebP, 4 Mo au maximum.",
+      "noPhotos": "Aucune photo publiée pour l'instant.",
+      "upload": "Ajouter une photo",
+      "uploading": "Envoi en cours…",
+      "uploaded": "Photo envoyée. Elle apparaîtra après validation.",
+      "photoType": "Format non accepté (JPG, PNG ou WebP seulement).",
+      "photoTooBig": "La photo dépasse 4 Mo.",
+      "photoError": "Envoi de la photo impossible."
+    }
+  },
+ 
+  "guide": {
+    "badge": "Guide d'utilisation",
+    "titlePre": "Comment utiliser ",
+    "titlePost": " ?",
+    "intro": "Suivez ce guide pas à pas pour découvrir facilement les restaurants, boutiques et services africains près de chez vous.",
+    "heroAlt": "Une personne consulte AfroPonte sur son téléphone",
+    "stepsLabel": "Étapes du guide",
+    "stepLabel": "Étape {{n}}",
+    "done": "Étape terminée",
+    "tipLabel": "Astuce :",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "finish": "Terminer",
+    "goTo": "Aller à l'étape {{n}}",
+    "steps": {
+      "access": {
+        "title": "Accéder au site",
+        "short": "Ouvrez AfroPonte depuis votre navigateur.",
+        "alt": "Page d'accueil d'AfroPonte",
+        "bubble": "1. Cliquez sur « Explorer »",
+        "tip": "Vous pouvez aussi utiliser la barre de recherche de l'accueil ou le bouton « Autour de moi »."
+      },
+      "choose": {
+        "title": "Choisir un type de commerce",
+        "short": "Restaurant, boutique, salon de coiffure, atelier de couture…",
+        "alt": "Page Explorer avec les catégories de commerces",
+        "bubble": "2. Choisissez le type de commerce",
+        "tip": "Affinez avec la ville, le pays d'origine, la vue Carte ou « Autour de moi »."
+      },
+      "details": {
+        "title": "Consulter les détails",
+        "short": "Horaires, adresse, avis et photos du commerce.",
+        "alt": "Liste des restaurants avec le bouton Découvrir",
+        "bubble": "3. Cliquez sur une carte pour voir les détails",
+        "tip": "La fiche affiche les horaires, l'adresse et les avis de la communauté, et vous pouvez ajouter le commerce à vos favoris."
+      },
+      "account": {
+        "title": "Se connecter",
+        "short": "Créez un compte pour profiter de toutes les fonctionnalités.",
+        "alt": "Formulaire de création de compte",
+        "bubble": "4. Créez votre compte ou connectez-vous",
+        "tip": "Avec un compte : favoris, avis, messages aux commerçants et inscription aux événements."
+      }
+    }
+  },
+
+  "dash": {
+  "hello": "Bonjour {{name}} !",
+  "fallbackName": "chef",
+  "heroText": "Voici un aperçu de votre activité aujourd'hui.",
+  "overviewTitle": "Vue d'ensemble",
+  "listTitle": "Mes établissements",
+  "quickTitle": "Accès rapide",
+  "total": "Établissements",
+  "approved": "Approuvés",
+  "pending": "En attente",
+  "reviews": "Avis reçus",
+  "average": "Note moyenne",
+  "messages": "Messagerie"
+}
+
+ 
+
+
+}

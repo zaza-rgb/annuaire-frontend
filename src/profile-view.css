@@ -1,0 +1,122 @@
+/* Page « Mon profil » (présentation) */
+.profile-view {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.pv-card {
+  background: #fffdf8;
+  border: 1px solid #e8d6cf;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 34px rgba(84, 39, 63, 0.1);
+}
+.pv-banner {
+  height: 130px;
+  background: linear-gradient(120deg, #54273f 0%, #7a3a5c 55%, #c8693f 100%);
+}
+.pv-head {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 0 28px 22px;
+  margin-top: -52px;
+}
+.pv-avatar {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  border: 5px solid #fffdf8;
+  background: linear-gradient(135deg, #54273f, #2f5d46);
+  color: #fff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+.pv-id {
+  flex: 1;
+  min-width: 180px;
+  padding-bottom: 6px;
+}
+.pv-name {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.15;
+}
+.pv-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 6px 0 0;
+}
+.pv-role {
+  color: #6b5b62;
+}
+.pv-edit {
+  margin-bottom: 6px;
+}
+.pv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding: 0 28px 28px;
+}
+.pv-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid #efe2dc;
+  border-radius: 16px;
+}
+.pv-item svg {
+  flex: none;
+  margin-top: 2px;
+  color: #54273f;
+}
+.pv-item small {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b5b62;
+}
+.pv-item span {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 560px) {
+  .pv-head {
+    padding: 0 18px 18px;
+  }
+  .pv-grid {
+    grid-template-columns: 1fr;
+    padding: 0 18px 22px;
+  }
+  .pv-edit {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.pv-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #f2e6e1;
+  color: #54273f;
+  font-weight: 600;
+  text-decoration: none;
+}
+.pv-back:hover {
+  background: #ead6ce;
+}

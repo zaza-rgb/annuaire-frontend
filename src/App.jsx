@@ -8,6 +8,7 @@ import ProtectedRoute from './components/ProtectedRoute.jsx';
 import Home from './pages/Home.jsx';
 import Register from './pages/Register.jsx';
 import Login from './pages/Login.jsx';
+import ProfileEdit from './pages/ProfileEdit.jsx';
 import Profile from './pages/Profile.jsx';
 import Explore from './pages/Explore.jsx';
 import BusinessDetail from './pages/BusinessDetail.jsx';
@@ -23,9 +24,11 @@ import AdminCatalog from './pages/admin/AdminCatalog.jsx';
 import InfoPage from './pages/InfoPage.jsx';
 import Events from './pages/Events.jsx';
 import EventDetail from './pages/EventDetail.jsx';
+import MerchantLayout from './pages/merchant/MerchantLayout.jsx';
 import MerchantDashboard from './pages/merchant/MerchantDashboard.jsx';
 import MerchantForm from './pages/merchant/MerchantForm.jsx';
 import MerchantEdit from './pages/merchant/MerchantEdit.jsx';
+import Guide from './pages/Guide.jsx';
 
 function PrivateRoute({ children }) {
   return localStorage.getItem('token') ? children : <Navigate to="/login" replace />;
@@ -58,16 +61,23 @@ export default function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+          <Route path="/profile/edit" element={<PrivateRoute><ProfileEdit /></PrivateRoute>} />
           <Route path="/favorites" element={<PrivateRoute><Favorites /></PrivateRoute>} />
           <Route path="/messages" element={<PrivateRoute><Messages /></PrivateRoute>} />
           <Route path="/messages/:id" element={<PrivateRoute><Messages /></PrivateRoute>} />
           <Route path="/events" element={<Events />} />
           <Route path="/events/:id" element={<EventDetail />} />
 
-          {/* Espace commerçant */}
-          <Route path="/merchant" element={<PrivateRoute><MerchantDashboard /></PrivateRoute>} />
-          <Route path="/merchant/new" element={<PrivateRoute><MerchantForm /></PrivateRoute>} />
-          <Route path="/merchant/:id/edit" element={<PrivateRoute><MerchantEdit /></PrivateRoute>} />
+          {/* Guide d'utilisation (public) */}
+          <Route path="/guide" element={<Guide />} />
+
+          {/* Espace commerçant : MerchantLayout affiche le menu à gauche, les pages s'affichent à droite.
+              Les écrans photos, avis, statistiques, notifications seront ajoutés ici plus tard. */}
+          <Route path="/merchant" element={<PrivateRoute><MerchantLayout /></PrivateRoute>}>
+            <Route index element={<MerchantDashboard />} />
+            <Route path="new" element={<MerchantForm />} />
+            <Route path=":id/edit" element={<MerchantEdit />} />
+          </Route>
 
           {/* Espace administrateur */}
           <Route path="/admin" element={<ProtectedRoute roles={['admin']}><AdminLayout /></ProtectedRoute>}>

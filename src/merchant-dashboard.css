@@ -1,0 +1,471 @@
+/* ===== Espace commerçant : cadre (mlay) + tableau de bord (dsh) ===== */
+/* Préfixes propres (mlay-, dsh-) pour ne pas entrer en conflit avec merchant.css */
+
+.mlay,
+.dsh {
+  --g-900: #14301f;
+  --g-800: #1b4332;
+  --g-600: #2f7a4f;
+  --orange: #c8693f;
+  --plum: #5a2344;
+  --gold: #d9a21b;
+  --paper: #fffdf9;
+  --line: #ece5da;
+  --ink: #1d2a22;
+  --muted: #6d746f;
+}
+
+/* ---------- Cadre : menu à gauche + contenu ---------- */
+/* Comme l'espace admin : pas de barre de navigation ni de pied de page du site (classe posée par MerchantLayout) */
+body.is-merchant .navbar,
+body.is-merchant .footer { display: none; }
+
+.mlay {
+  display: grid;
+  grid-template-columns: 264px minmax(0, 1fr);
+  align-items: start;
+  flex: 1;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.mlay-side {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 14px;
+  color: #eaf3ec;
+  background:
+    radial-gradient(90% 30% at 100% 0%, rgba(200, 105, 63, 0.35), transparent 70%),
+    linear-gradient(180deg, var(--g-800), var(--g-900));
+}
+
+.mlay-brand {
+  display: inline-block;
+  margin: 2px 8px 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.45rem;
+  letter-spacing: -0.8px;
+  color: #fff;
+  text-decoration: none;
+}
+.mlay-brand em { font-style: normal; color: #f0a37f; }
+
+.mlay-me {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px 16px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.mlay-me__avatar {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 700;
+}
+.mlay-me strong {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+.mlay-me span:not(.mlay-me__avatar) {
+  font-size: 0.78rem;
+  color: #b9d3c1;
+}
+
+.mlay-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.mlay-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #eaf3ec;
+  text-decoration: none;
+  font-size: 0.93rem;
+  transition: background 0.15s;
+}
+a.mlay-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.mlay-item.is-active {
+  background: var(--orange);
+  color: #fff;
+  font-weight: 600;
+}
+.mlay-item.is-soon {
+  opacity: 0.55;
+  cursor: default;
+}
+.mlay-item em {
+  margin-left: auto;
+  font-style: normal;
+  font-size: 0.68rem;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+}
+.mlay-item:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.mlay-nav { flex: 1; }
+
+.mlay-foot {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+button.mlay-item {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+button.mlay-item:hover { background: rgba(255, 255, 255, 0.08); }
+
+.mlay-main {
+  min-width: 0;
+  padding: 28px clamp(18px, 3vw, 40px) 48px;
+}
+
+/* ---------- Bannière ---------- */
+.dsh {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--ink);
+}
+
+.dsh-hero {
+  /* Pour une photo de fond : --dsh-hero-img: url('/images/...webp'); sur .dsh-hero */
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 40px 36px;
+  min-height: 190px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background:
+    linear-gradient(100deg, rgba(20, 48, 31, 0.96) 0%, rgba(27, 67, 50, 0.88) 55%, rgba(27, 67, 50, 0.45) 100%),
+    var(--dsh-hero-img, none) center / cover,
+    radial-gradient(circle at 88% 20%, #c8693f 0, transparent 45%),
+    var(--g-800);
+}
+.dsh-hero::after {
+  /* grand cercle chaud à droite, rappel du logo */
+  content: '';
+  position: absolute;
+  right: -70px;
+  top: -70px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 105, 63, 0.55), transparent 68%);
+  pointer-events: none;
+}
+.dsh-hero__text {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+}
+.dsh-hero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  line-height: 1.15;
+  color: #fff;
+}
+.dsh-hero p {
+  margin: 0 0 20px;
+  color: #dcebe0;
+  max-width: 46ch;
+}
+.dsh-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 10px;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: filter 0.15s;
+}
+.dsh-hero__btn:hover {
+  filter: brightness(1.08);
+}
+.dsh-hero__btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+/* ---------- Cartes de chiffres ---------- */
+.dsh-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+}
+.dsh-stat {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 12px 16px;
+  text-align: center;
+}
+.dsh-stat__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.dsh-stat__value {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.9rem;
+  line-height: 1.1;
+}
+.dsh-stat__label {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.dsh-tone-green { background: #e3f0e8; color: var(--g-600); }
+.dsh-tone-leaf { background: #e6f4d9; color: #4f8a1f; }
+.dsh-tone-orange { background: #fbe9dc; color: var(--orange); }
+.dsh-tone-plum { background: #f1e1ea; color: var(--plum); }
+.dsh-tone-gold { background: #fbf0d0; color: var(--gold); }
+
+/* ---------- Grille principale ---------- */
+.dsh-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 20px;
+  align-items: start;
+}
+.dsh-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dsh-panel {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+}
+.dsh-panel__title {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+}
+.dsh-empty {
+  text-align: center;
+  padding: 36px 20px;
+}
+.dsh-empty h2 {
+  margin: 0 0 6px;
+}
+.dsh-empty p {
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+/* ---------- Liste des établissements ---------- */
+.dsh-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+.dsh-biz {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+.dsh-biz:first-child {
+  border-top: 0;
+}
+.dsh-biz__logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--g-600), var(--g-800));
+}
+.dsh-biz__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.dsh-biz__top h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+.dsh-biz__body p {
+  margin: 3px 0 0;
+}
+.dsh-biz__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Pages MerchantForm / MerchantEdit affichées dans le cadre : on neutralise la marge de .page */
+.mlay-main .page {
+  max-width: 1000px;
+  margin: 0;
+  padding: 0;
+}
+.mlay-main .page.narrow-620 { max-width: 700px; }
+
+/* .btn-ghost global = texte blanc : illisible sur fond clair */
+.mlay-main .btn-ghost {
+  color: var(--plum);
+  border-color: var(--line);
+  background: transparent;
+}
+.mlay-main .btn-ghost:hover { background: var(--gold); border-color: var(--gold); }
+
+/* ---------- Colonne de droite ---------- */
+.dsh-bars {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.dsh-bars__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+.dsh-bars__track {
+  height: 8px;
+  border-radius: 999px;
+  background: #efe9de;
+  overflow: hidden;
+}
+.dsh-bars__fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+}
+.dsh-bars__fill--approved { background: var(--g-600); }
+.dsh-bars__fill--pending { background: #e0a030; }
+.dsh-bars__fill--rejected { background: #c0392b; }
+
+.dsh-quick {
+  display: flex;
+  flex-direction: column;
+}
+.dsh-quick a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 4px;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.93rem;
+}
+.dsh-quick a:first-child {
+  border-top: 0;
+}
+.dsh-quick a svg:last-child {
+  margin-left: auto;
+  color: var(--muted);
+}
+.dsh-quick a:hover {
+  color: var(--orange);
+}
+
+/* ---------- Tablette et mobile ---------- */
+@media (max-width: 1100px) {
+  .dsh-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .mlay {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .mlay-side {
+    position: static;
+    height: auto;
+    padding: 12px;
+  }
+  .mlay-brand { margin-bottom: 8px; }
+  .mlay-foot { flex-direction: row; margin-top: 8px; padding-top: 8px; }
+  .mlay-main { padding: 18px 16px 36px; }
+  .mlay-me {
+    display: none;
+  }
+  .mlay-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 6px;
+    padding-bottom: 2px;
+  }
+  .mlay-item {
+    flex: none;
+    white-space: nowrap;
+  }
+  .mlay-item em {
+    display: none;
+  }
+  .dsh-hero {
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .dsh-biz {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+  .dsh-biz__logo {
+    width: 48px;
+    height: 48px;
+  }
+  .dsh-biz__actions {
+    grid-column: 1 / -1;
+    flex-direction: row;
+  }
+}

@@ -1072,3 +1072,58 @@ body.is-admin .dash-msg span { color: #77786f; font-size: .85rem; font-weight: 6
 .info-section h2 { font-size: 22px; margin: 0 0 8px; }
 .info-section p { margin: 0; }
 .info-updated { font-size: 12px; margin-top: 22px; }
+
+
+/* Menu de l'icône de profil (commerçant) : à ajouter à la fin de index.css */
+.avatar-menu {
+  position: relative;
+}
+.avatar-btn {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+.avatar-popover {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  z-index: 60;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  background: #fffdf8;
+  border: 1px solid #e8d6cf;
+  border-radius: 16px;
+  box-shadow: 0 14px 36px rgba(84, 39, 63, 0.18);
+}
+.avatar-popover__name {
+  margin: 0;
+  font-weight: 700;
+}
+.avatar-popover__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #efe2dc;
+}
+.avatar-popover__ask {
+  margin: 4px 0 0;
+  font-size: 0.92rem;
+  color: #6b5b62;
+}
+
+
+
+
+
+
+
+
+
+
+

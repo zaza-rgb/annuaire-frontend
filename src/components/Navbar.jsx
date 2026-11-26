@@ -4,9 +4,11 @@ import { useTranslation } from 'react-i18next';
 import {
   CalendarDays,
   CalendarPlus,
+  CircleHelp,
   Compass,
   Heart,
   House,
+  LayoutDashboard,
   LogIn,
   LogOut,
   Menu,
@@ -33,9 +35,12 @@ export default function Navbar() {
   useLocation(); // recalcule la barre à chaque changement de page
   const navigate = useNavigate();
   const headerRef = useRef(null);
+  const menuRef = useRef(null);
   const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // menu de l'icône de profil (commerçant)
   const token = localStorage.getItem('token');
   const user = readUser();
+  const isMerchant = user?.role === 'merchant';
   const initial = user?.name ? user.name.charAt(0).toUpperCase() : '•';
 
   // Barre qui se resserre au défilement + fine ligne de progression de lecture
@@ -53,6 +58,23 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Ferme le menu du profil : clic à l'extérieur ou touche Échap
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+    const onClick = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) setMenuOpen(false);
+    };
+    const onKey = (e) => {
+      if (e.key === 'Escape') setMenuOpen(false);
+    };
+    document.addEventListener('mousedown', onClick);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', onClick);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [menuOpen]);
+
   const logout = async () => {
     try {
       await api.post('/logout');
@@ -63,10 +85,12 @@ export default function Navbar() {
     localStorage.removeItem('user');
     resetFavorites(); // les cœurs d'un compte ne doivent pas rester pour le suivant
     setOpen(false);
+    setMenuOpen(false);
     navigate('/login');
   };
 
   const cls = ({ isActive }) => (isActive ? 'active' : '');
+  const guideCls = ({ isActive }) => `nav-guide ${isActive ? 'active' : ''}`;
   const close = () => setOpen(false);
 
   return (
@@ -82,11 +106,21 @@ export default function Navbar() {
         <NavLink to="/" end className={cls} onClick={close}>
           <House size={16} /> {t('nav.home')}
         </NavLink>
-        <NavLink to="/businesses" className={cls} onClick={close}>
-          <Compass size={16} /> {t('nav.explore')}
-        </NavLink>
+        {/* Le commerçant n'a pas le lien « Explorer » : il a son tableau de bord */}
+        {isMerchant ? (
+          <NavLink to="/merchant" className={cls} onClick={close}>
+            <LayoutDashboard size={16} /> {t('nav.dashboard')}
+          </NavLink>
+        ) : (
+          <NavLink to="/businesses" className={cls} onClick={close}>
+            <Compass size={16} /> {t('nav.explore')}
+          </NavLink>
+        )}
         <NavLink to="/events" className={cls} onClick={close}>
           <CalendarDays size={16} /> {t('nav.events')}
+        </NavLink>
+        <NavLink to="/guide" className={guideCls} onClick={close}>
+          <CircleHelp size={16} /> {t('nav.guide')}
         </NavLink>
         {token && (
           <>
@@ -132,14 +166,37 @@ export default function Navbar() {
 
       <div className="top-actions">
         {token ? (
-          <>
-            <Link to="/profile" className="avatar" title={t('nav.profile')}>
+          // Tout compte connecté (particulier, commerçant, etc.) : pas de bouton Déconnexion
+          // dans la barre, tout passe par l'icône de profil
+          <div className="avatar-menu" ref={menuRef}>
+            <button
+              type="button"
+              className="avatar avatar-btn"
+              onClick={() => setMenuOpen((o) => !o)}
+              aria-haspopup="true"
+              aria-expanded={menuOpen}
+              title={t('nav.profile')}
+            >
               {initial}
-            </Link>
-            <button className="btn btn-outline" onClick={logout}>
-              <LogOut size={16} /> {t('nav.logout')}
             </button>
-          </>
+            {menuOpen && (
+              <div className="avatar-popover" role="menu">
+                <p className="avatar-popover__name">{user?.name}</p>
+                <Link
+                  to="/profile"
+                  className="avatar-popover__link"
+                  role="menuitem"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <UserRound size={16} /> {t('nav.profile')}
+                </Link>
+                <p className="avatar-popover__ask">{t('nav.logoutQuestion')}</p>
+                <button type="button" className="btn btn-outline" onClick={logout}>
+                  <LogOut size={16} /> {t('nav.logout')}
+                </button>
+              </div>
+            )}
+          </div>
         ) : (
           <>
             <Link to="/login" className="btn btn-outline">

@@ -13,10 +13,13 @@
     "admin": "Administration",
     "menuOpen": "Ouvrir le menu",
     "menuClose": "Fermer le menu",
-     "events": "Événements",
-"organizer": "Mes événements organisés"
+    "events": "Événements",
+    "organizer": "Mes événements organisés",
+    "guide": "Guide d'utilisation",
+    "dashboard": "Tableau de bord",
+    "logoutQuestion": "Voulez-vous vous déconnecter ?"
   },
-    "events": {
+  "events": {
     "eyebrow": "Rencontres",
     "heroA": "Découvre les",
     "heroB": "événements",
@@ -173,7 +176,11 @@
     "readonly": "Ces informations ne peuvent pas être modifiées ici.",
     "email": "E-mail",
     "accountType": "Type de compte",
-    "status": "Statut"
+    "status": "Statut",
+    "edit": "Modifier",
+    "notProvided": "Non renseigné",
+    "cancel": "Annuler",
+    "back": "Retour"
   },
   "roles": {
     "user": "Particulier",
@@ -569,15 +576,22 @@
       ]
     }
   },
-
-  
-  
- 
   "merchant": {
     "nav": {
       "dashboard": "Mes commerces",
       "add": "Inscrire un commerce",
-      "messages": "Messages"
+      "messages": "Messages",
+      "menu": "Menu de l'espace commerçant",
+      "role": "Commerçant",
+      "soon": "Bientôt",
+      "backSite": "Retour au site",
+      "logout": "Déconnexion",
+      "business": "Mon établissement",
+      "photos": "Galerie photos",
+      "reviews": "Mes avis",
+      "stats": "Statistiques",
+      "notifications": "Notifications",
+      "settings": "Paramètres"
     },
     "status": {
       "all": "Toutes",
@@ -662,9 +676,65 @@
       "photoType": "Format non accepté (JPG, PNG ou WebP seulement).",
       "photoTooBig": "La photo dépasse 4 Mo.",
       "photoError": "Envoi de la photo impossible."
+    },
+    "dash": {
+      "hello": "Bonjour {{name}} !",
+      "fallbackName": "chef",
+      "heroText": "Voici un aperçu de votre activité aujourd'hui.",
+      "overviewTitle": "Vue d'ensemble",
+      "listTitle": "Mes établissements",
+      "quickTitle": "Accès rapide",
+      "total": "Établissements",
+      "approved": "Approuvés",
+      "pending": "En attente",
+      "reviews": "Avis reçus",
+      "average": "Note moyenne",
+      "messages": "Messagerie"
+    }
+  },
+  "guide": {
+    "badge": "Guide d'utilisation",
+    "titlePre": "Comment utiliser ",
+    "titlePost": " ?",
+    "intro": "Suivez ce guide pas à pas pour découvrir facilement les restaurants, boutiques et services africains près de chez vous.",
+    "heroAlt": "Une personne consulte AfroPonte sur son téléphone",
+    "stepsLabel": "Étapes du guide",
+    "stepLabel": "Étape {{n}}",
+    "done": "Étape terminée",
+    "tipLabel": "Astuce :",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "finish": "Terminer",
+    "goTo": "Aller à l'étape {{n}}",
+    "steps": {
+      "access": {
+        "title": "Accéder au site",
+        "short": "Ouvrez AfroPonte depuis votre navigateur.",
+        "alt": "Page d'accueil d'AfroPonte",
+        "bubble": "1. Cliquez sur « Explorer »",
+        "tip": "Vous pouvez aussi utiliser la barre de recherche de l'accueil ou le bouton « Autour de moi »."
+      },
+      "choose": {
+        "title": "Choisir un type de commerce",
+        "short": "Restaurant, boutique, salon de coiffure, atelier de couture…",
+        "alt": "Page Explorer avec les catégories de commerces",
+        "bubble": "2. Choisissez le type de commerce",
+        "tip": "Affinez avec la ville, le pays d'origine, la vue Carte ou « Autour de moi »."
+      },
+      "details": {
+        "title": "Consulter les détails",
+        "short": "Horaires, adresse, avis et photos du commerce.",
+        "alt": "Liste des restaurants avec le bouton Découvrir",
+        "bubble": "3. Cliquez sur une carte pour voir les détails",
+        "tip": "La fiche affiche les horaires, l'adresse et les avis de la communauté, et vous pouvez ajouter le commerce à vos favoris."
+      },
+      "account": {
+        "title": "Se connecter",
+        "short": "Créez un compte pour profiter de toutes les fonctionnalités.",
+        "alt": "Formulaire de création de compte",
+        "bubble": "4. Créez votre compte ou connectez-vous",
+        "tip": "Avec un compte : favoris, avis, messages aux commerçants et inscription aux événements."
+      }
     }
   }
- 
-
-
 }

@@ -1,0 +1,720 @@
+{
+  "languages": {
+    "choose": "Escolher um idioma",
+    "loadError": "Não foi possível carregar os idiomas."
+  },
+  "nav": {
+    "home": "Início",
+    "explore": "Explorar",
+    "profile": "Meu perfil",
+    "logout": "Sair",
+    "login": "Entrar",
+    "signup": "Criar uma conta",
+    "admin": "Administração",
+    "menuOpen": "Abrir o menu",
+    "menuClose": "Fechar o menu",
+    "merchant": "Área do comerciante",
+      "events": "Eventos",
+"organizer": "Meus eventos organizados",
+"guide": "Guia de uso",
+"dashboard": "Painel",
+    "logoutQuestion": "Deseja sair da conta?"
+  },
+  "events": {
+  "eyebrow": "Encontros",
+  "heroA": "Descubra os",
+  "heroB": "eventos",
+  "heroC": "da comunidade africana",
+  "lead": "Festas, encontros, cultos, esporte: encontre sua comunidade perto de você.",
+  "explore": "Explorar eventos",
+  "searchPlaceholder": "Pesquisar um evento…",
+  "cityPlaceholder": "Cidade",
+  "language": "Idioma",
+  "category": "Categoria",
+  "allLanguages": "Todos os idiomas",
+  "allCategories": "Todas as categorias",
+  "date": "Data",
+  "searchBtn": "Pesquisar",
+  "nearMe": "Perto de mim",
+  "nearMeOn": "Perto de mim: ativado",
+  "radius": "Raio de busca",
+  "geoUnavailable": "A geolocalização não está disponível neste navegador.",
+  "geoDenied": "Não foi possível obter sua posição. Permita a localização no navegador.",
+  "upcoming": "Próximos eventos",
+  "viewAll": "Ver todos",
+  "searching": "Pesquisando…",
+  "count_one": "{{count}} evento encontrado",
+  "count_other": "{{count}} eventos encontrados",
+  "empty": "Nenhum evento. Tente outra busca.",
+  "loadError": "Não foi possível carregar os eventos.",
+  "registered_one": "{{count}} inscrito",
+  "registered_other": "{{count}} inscritos",
+  "placesLeft": "{{n}} vaga(s) restante(s)",
+  "full": "Esgotado",
+  "see": "Ver",
+  "register": "Inscrever-se"
+},
+  "home": {
+    "eyebrow": "O guia afro do Brasil",
+    "titleLine": "Viva a riqueza",
+    "titleAccent": "da África no Brasil.",
+    "intro": "Restaurantes, lojas, salões de cabeleireiro e ateliês de costura africanos e afrodescendentes. Lugares cheios de vida e encontros que começam perto de você.",
+    "searchPlaceholder": "Um restaurante, uma loja, um bairro…",
+    "searchAria": "Pesquisar um negócio",
+    "card1Title": "Mapa interativo",
+    "card1Text": "Encontre lugares perto de você",
+    "card2Title": "Avaliações moderadas",
+    "card2Text": "Fichas confiáveis e verificadas",
+    "card3Title": "Mensagens diretas",
+    "card3Text": "Escreva ao negócio com um clique",
+    "scrollCue": "Ver mais",
+    "universEyebrow": "Navegar por categoria",
+    "universTitle": "Tudo o que faz a África vibrar, perto de casa.",
+    "discoverTitle": "Descobrir",
+    "discoverText": "Um guia por cidade, categoria e país de origem, com fotos, horários e avaliações.",
+    "connectTitle": "Conectar",
+    "connectText": "Entre em contato direto com os negócios, guarde seus favoritos e encontre suas conversas.",
+    "growTitle": "Crescer",
+    "growText": "Fichas gratuitas, perfis vivos e uma moderação que protege a qualidade.",
+    "storyEyebrow": "Um negócio merece ser encontrado",
+    "storyTitle": "O seu saber-fazer tem lugar no mapa.",
+    "storyText": "Crie a sua vitrine e divulgue o seu negócio além do seu bairro.",
+    "storyCta": "Apresentar meu negócio"
+  },
+  "footer": {
+    "tagline": "Os melhores endereços afro, ao alcance do seu bairro.",
+    "bridge": "Uma ponte entre a África e o Brasil.",
+    "categories": "Restaurantes · Lojas · Cabelo · Costura",
+    "copyright": "© {{year}} afroponte. Todos os direitos reservados.",
+    "listBusiness": "Cadastrar um negócio",
+    "login": "Entrar",
+    "colExplore": "Explorar",
+    "colMerchants": "Comerciantes",
+    "colSite": "AfroPonte",
+    "about": "Sobre",
+    "contact": "Contato",
+    "privacy": "Privacidade",
+    "terms": "Termos de uso",
+    "legal": "Informações legais",
+    "backToTop": "Voltar ao topo",
+    "whatsapp": "WhatsApp"
+  },
+  "univers": {
+    "restaurants": {
+      "title": "Restaurantes",
+      "text": "Os sabores da África, do maffé ao thieboudienne."
+    },
+    "shops": {
+      "title": "Lojas",
+      "text": "Tecidos, especiarias, produtos de origem e moda."
+    },
+    "beauty": {
+      "title": "Cabelo e beleza",
+      "text": "Tranças, cuidados e salões especializados."
+    },
+    "craft": {
+      "title": "Costura e artesanato",
+      "text": "Wax, sob medida e saber-fazer de ateliê."
+    }
+  },
+  "band": {
+    "culture": "Cultura",
+    "community": "Comunidade"
+  },
+  "splash": {
+    "africa": "África",
+    "brazil": "Brasil"
+  },
+  "common": {
+    "error": "Ocorreu um erro. Tente novamente."
+  },
+  "auth": {
+    "login": {
+      "eyebrow": "Que bom ver você de novo",
+      "title": "Volte para a roda.",
+      "lead": "Entre para encontrar seus favoritos e suas conversas.",
+      "email": "Endereço de e-mail",
+      "emailPlaceholder": "voce@exemplo.com",
+      "password": "Senha",
+      "submit": "Entrar",
+      "submitting": "Entrando…",
+      "noAccount": "Ainda não tem conta?",
+      "createAccount": "Criar uma conta"
+    },
+    "register": {
+      "eyebrow": "Junte-se à rede",
+      "title": "Crie o seu espaço.",
+      "name": "Nome",
+      "namePlaceholder": "Seu nome",
+      "email": "E-mail",
+      "phone": "Telefone (opcional)",
+      "password": "Senha",
+      "confirm": "Confirmar a senha",
+      "language": "Idioma preferido",
+      "accountType": "Eu sou",
+      "typeUser": "Uma pessoa física",
+      "typeMerchant": "Um comerciante",
+      "submit": "Criar minha conta",
+      "submitting": "Enviando…",
+      "already": "Já tem cadastro?",
+      "login": "Entrar",
+      "languagesError": "Não foi possível carregar os idiomas. Verifique se a API está em execução."
+    }
+  },
+  "profile": {
+    "eyebrow": "Configurações",
+    "title": "Meu perfil",
+    "loading": "Carregando…",
+    "loadError": "Não foi possível carregar o perfil.",
+    "name": "Nome",
+    "phone": "Telefone",
+    "language": "Idioma preferido",
+    "save": "Salvar",
+    "saving": "Salvando…",
+    "saved": "Perfil salvo.",
+    "saveError": "Não foi possível salvar. Tente novamente.",
+    "accountInfo": "Informações da conta",
+    "readonly": "Estas informações não podem ser alteradas aqui.",
+    "email": "E-mail",
+    "accountType": "Tipo de conta",
+    "status": "Status",
+        "edit": "Editar",
+    "notProvided": "Não informado",
+    "cancel": "Cancelar",
+    "back": "Voltar"
+
+  },
+  "roles": {
+    "user": "Pessoa física",
+    "merchant": "Comerciante",
+    "admin": "Administrador"
+  },
+  "status": {
+    "active": "Ativo",
+    "pending": "Pendente",
+    "suspended": "Suspenso"
+  },
+  "detail": {
+    "back": "← Voltar ao guia",
+    "loading": "Carregando…",
+    "notFound": "Esta ficha não foi encontrada.",
+    "loadError": "Não foi possível carregar a ficha.",
+    "call": "Ligar",
+    "fallbackCountry": "África e diáspora",
+    "artNote": "Um lugar para descobrir",
+    "contact": "Contato",
+    "origin": "País de origem",
+    "languages": "Idiomas",
+    "hours": "Horário de funcionamento",
+    "noHours": "Horários não informados.",
+    "closed": "Fechado",
+    "photos": "Fotos",
+    "photoAlt": "Foto de {{name}}",
+    "community": "O que a comunidade diz",
+    "noReviews": "Nenhuma avaliação ainda.",
+    "member": "Um membro"
+  },
+  "days": {
+    "mon": "Segunda-feira",
+    "tue": "Terça-feira",
+    "wed": "Quarta-feira",
+    "thu": "Quinta-feira",
+    "fri": "Sexta-feira",
+    "sat": "Sábado",
+    "sun": "Domingo"
+  },
+  "map": {
+    "you_are_here": "Você está aqui",
+    "view_business": "Ver a ficha",
+    "not_located": "{{n}} negócio(s) sem localização não aparecem no mapa."
+  },
+  "explore": {
+    "eyebrow": "O guia",
+    "title": "Explorar endereços",
+    "lead": "Lugares independentes, escolhidos por suas raízes afro.",
+    "search": "Pesquisar",
+    "searchPlaceholder": "Nome, atividade, bairro…",
+    "city": "Cidade",
+    "allCities": "Todas as cidades",
+    "country": "País de origem",
+    "allCountries": "Todos os países",
+    "all": "Todos",
+    "viewList": "Lista",
+    "viewMap": "Mapa",
+    "nearMe": "Perto de mim",
+    "nearMeOn": "Perto de mim: ativado",
+    "radiusLabel": "Raio de busca",
+    "radiusOption": "Em um raio de {{km}} km",
+    "geoUnavailable": "A geolocalização não está disponível neste navegador.",
+    "geoDenied": "Não foi possível obter sua posição. Permita a localização no navegador.",
+    "loadError": "Não foi possível carregar os negócios. Verifique se a API está em execução.",
+    "searching": "Pesquisando…",
+    "found_one": "{{count}} endereço encontrado",
+    "found_other": "{{count}} endereços encontrados",
+    "noResults": "Nenhum resultado. Tente outra busca.",
+    "mapLimit": "Os primeiros {{n}} negócios estão sendo exibidos. Refine a busca para ver os demais.",
+    "previous": "← Anterior",
+    "next": "Próximo →",
+    "page": "Página {{current}} de {{last}}"
+  },
+  "card": {
+    "discover": "Descobrir",
+    "noReviews": "Nenhuma avaliação",
+    "reviews_one": "{{count}} avaliação",
+    "reviews_other": "{{count}} avaliações",
+    "distance": "a {{km}} km"
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "text": "Esta página não existe ou foi movida."
+  },
+  "favorites": {
+    "title": "Meus favoritos",
+    "count_one": "{{count}} favorito",
+    "count_other": "{{count}} favoritos",
+    "emptyTitle": "Nenhum favorito ainda",
+    "emptyText": "Toque no coração em uma ficha para encontrá-la aqui depois.",
+    "explore": "Explorar negócios",
+    "add": "Adicionar aos favoritos",
+    "remove": "Remover dos favoritos",
+    "loadError": "Não foi possível carregar seus favoritos. Tente novamente em instantes.",
+    "prev": "Anterior",
+    "next": "Próximo",
+    "page": "Página {{current}} de {{last}}"
+  },
+  "review": {
+    "title": "Deixar uma avaliação",
+    "rating": "Sua nota",
+    "ratingValue": "{{n}} de 5",
+    "comment": "Seu comentário (opcional)",
+    "commentPlaceholder": "O que você gostou, o que poderia melhorar…",
+    "submit": "Enviar minha avaliação",
+    "sent": "Obrigado! Sua avaliação aparecerá depois de aprovada.",
+    "chooseRating": "Escolha uma nota de 1 a 5.",
+    "already": "Você já avaliou este negócio.",
+    "own": "Você não pode avaliar a sua própria ficha.",
+    "loginRequired": "Entre para deixar uma avaliação.",
+    "login": "Entrar",
+    "error": "Não foi possível enviar sua avaliação. Tente novamente."
+  },
+  "messages": {
+    "title": "Mensagens",
+    "empty": "Nenhuma conversa",
+    "emptyText": "Abra a ficha de um negócio e escolha “Enviar uma mensagem” para escrever a ele.",
+    "select": "Escolha uma conversa para ler as mensagens.",
+    "noMessages": "Nenhuma mensagem ainda. Escreva a primeira.",
+    "placeholder": "Escreva uma mensagem…",
+    "send": "Enviar",
+    "back": "Voltar às conversas",
+    "unread_one": "{{count}} mensagem não lida",
+    "unread_other": "{{count}} mensagens não lidas",
+    "loadError": "Não foi possível carregar as mensagens. Tente novamente em instantes.",
+    "sendError": "Não foi possível enviar a mensagem. Verifique o conteúdo e tente novamente.",
+    "contact": "Enviar uma mensagem",
+    "contactNoOwner": "Este negócio ainda não tem proprietário cadastrado.",
+    "contactOwn": "Esta é a sua própria ficha."
+  },
+  "forbidden": {
+    "title": "Acesso negado",
+    "code": "Erro 403",
+    "text": "Você não tem permissão para ver esta página.",
+    "home": "Voltar ao início",
+    "back": "Página anterior"
+  },
+  "admin": {
+    "title": "Administração",
+    "nav": {
+      "dashboard": "Painel",
+      "businesses": "Fichas",
+      "reviews": "Avaliações",
+      "photos": "Fotos",
+      "reports": "Denúncias",
+      "claims": "Reivindicações",
+      "users": "Contas",
+      "categories": "Categorias",
+      "countries": "Países",
+      "languages": "Idiomas"
+    },
+    "actionError": "A ação falhou. Tente novamente.",
+    "dashboard": {
+      "loadError": "Não foi possível carregar as estatísticas."
+    },
+    "prev": "Anterior",
+    "next": "Próximo",
+    "page": "Página {{current}} de {{last}}",
+    "queue": {
+      "title": {
+        "businesses": "Fichas a validar",
+        "reviews": "Avaliações a moderar",
+        "photos": "Fotos a moderar",
+        "reports": "Denúncias",
+        "claims": "Reivindicações"
+      },
+      "approve": "Aprovar",
+      "reject": "Recusar",
+      "resolve": "Resolver",
+      "dismiss": "Descartar",
+      "accept": "Aceitar",
+      "by": "Autor",
+      "on": "Ficha",
+      "owner": "Proprietário",
+      "proposer": "Sugerida por",
+      "empty": "Nada a tratar no momento.",
+      "filter": "Status",
+      "loadError": "Não foi possível carregar a lista.",
+      "noText": "(sem texto)",
+      "photoAlt": "Foto enviada"
+    },
+    "catalog": {
+      "title": {
+        "categories": "Categorias",
+        "countries": "Países de origem",
+        "languages": "Idiomas"
+      },
+      "add": "Adicionar",
+      "edit": "Editar",
+      "delete": "Excluir",
+      "save": "Salvar",
+      "cancel": "Cancelar",
+      "code": "Código",
+      "name": "Nome",
+      "confirm": "Excluir \"{{name}}\"?",
+      "empty": "Nada por aqui ainda.",
+      "loadError": "Não foi possível carregar a lista.",
+      "error": "A operação falhou."
+    },
+    "roles": {
+      "user": "Pessoa física",
+      "merchant": "Comerciante",
+      "admin": "Administrador"
+    },
+    "stats": {
+      "users": "Usuários",
+      "total": "Total",
+      "by_role": "Por perfil",
+      "suspended": "Suspensos",
+      "businesses": "Fichas",
+      "pending": "Pendentes",
+      "approved": "Aprovadas",
+      "rejected": "Recusadas",
+      "reviews": "Avaliações",
+      "photos": "Fotos",
+      "claims": "Reivindicações",
+      "reports_open": "Denúncias abertas",
+      "conversations": "Conversas",
+      "messages": "Mensagens",
+      "user": "Pessoas físicas",
+      "merchant": "Comerciantes",
+      "admin": "Administradores"
+    },
+    "status": {
+      "pending": "Pendente",
+      "approved": "Aprovado",
+      "rejected": "Recusado",
+      "open": "Aberto",
+      "resolved": "Resolvido",
+      "dismissed": "Descartado",
+      "active": "Ativo",
+      "suspended": "Suspenso"
+    },
+    "users": {
+      "title": "Contas",
+      "all": "Todos",
+      "search": "Pesquisar por nome ou e-mail",
+      "count": "{{count}} conta(s)",
+      "name": "Nome",
+      "email": "E-mail",
+      "role": "Perfil",
+      "created": "Cadastro",
+      "suspend": "Suspender",
+      "reactivate": "Reativar",
+      "confirmSuspend": "Suspender esta conta? O usuário será desconectado.",
+      "self": "Sua conta",
+      "locked": "Conta de administrador protegida"
+    }
+  },
+  "pages": {
+    "backHome": "Voltar ao início",
+    "updated": "Última atualização: {{date}}",
+    "toComplete": "(a completar)",
+    "contactEmail": "Enviar um e-mail",
+    "contactWhatsapp": "Escrever no WhatsApp",
+    "about": {
+      "title": "Sobre a AfroPonte",
+      "intro": "A AfroPonte é uma ponte entre a África e o Brasil: um guia que ajuda a encontrar, perto de você, restaurantes, lojas, salões de cabeleireiro e ateliês de costura africanos.",
+      "sections": [
+        {
+          "h": "Nossa missão",
+          "p": "Dar visibilidade aos negócios africanos e afrodescendentes do Brasil e aproximar quem os mantém de quem os procura: turistas, estudantes, imigrantes, empresários e famílias."
+        },
+        {
+          "h": "O que você pode fazer",
+          "p": "Buscar um negócio por cidade, categoria ou país de origem, vê-lo no mapa, salvar seus favoritos, deixar uma avaliação e escrever diretamente ao comerciante pelo aplicativo, sem passar pelo WhatsApp."
+        },
+        {
+          "h": "Para comerciantes",
+          "p": "Divulgar seu negócio é gratuito. Cada cadastro é verificado antes da publicação, e as avaliações e fotos são moderadas para manter o guia confiável."
+        },
+        {
+          "h": "Uma comunidade",
+          "p": "A AfroPonte cresce com seus usuários: sugira um negócio que está faltando, avise sobre uma informação errada, compartilhe sua experiência."
+        },
+        {
+          "h": "Três idiomas",
+          "p": "O site está disponível em francês, inglês e português."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Fale conosco",
+      "intro": "Uma dúvida, uma sugestão, um negócio para adicionar ou um problema para comunicar? Escreva para nós.",
+      "sections": [
+        {
+          "h": "Para usuários",
+          "p": "Para falar com um comerciante, use as mensagens do aplicativo a partir do cadastro dele."
+        },
+        {
+          "h": "Para comerciantes",
+          "p": "Para cadastrar ou reivindicar seu negócio, crie uma conta de comerciante. Precisa de ajuda? Escreva para nós."
+        },
+        {
+          "h": "Comunicar um problema",
+          "p": "Um cadastro incorreto ou um conteúdo inadequado? Use o botão de denúncia ou escreva para nós indicando a página."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Política de privacidade",
+      "intro": "Esta página explica quais dados a AfroPonte coleta, por quê, e quais são os seus direitos, conforme a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).",
+      "sections": [
+        {
+          "h": "Dados que coletamos",
+          "p": "Conta: nome, e-mail, senha (criptografada), telefone (opcional), idioma e tipo de conta. Uso: favoritos, avaliações, fotos e mensagens trocadas no aplicativo. Localização: somente se você usar “Perto de mim”, para calcular os negócios próximos."
+        },
+        {
+          "h": "Por que os usamos",
+          "p": "Para criar e proteger sua conta, exibir o guia, permitir as mensagens, moderar conteúdos e melhorar o serviço. Não vendemos seus dados."
+        },
+        {
+          "h": "Suas mensagens",
+          "p": "As conversas são privadas. Somente conversas denunciadas podem ser analisadas pela equipe de moderação, para tratar a denúncia."
+        },
+        {
+          "h": "Compartilhamento",
+          "p": "Seus dados só são compartilhados com os prestadores técnicos necessários ao funcionamento do site (hospedagem, envio de e-mails) ou quando a lei exigir. As avaliações e fotos que você publica ficam visíveis para os outros visitantes."
+        },
+        {
+          "h": "Armazenamento no seu aparelho",
+          "p": "O site guarda no seu navegador o idioma e a sessão de login. Atualmente, não usa cookies de publicidade."
+        },
+        {
+          "h": "Tempo de armazenamento",
+          "p": "Seus dados são mantidos enquanto sua conta estiver ativa. Você pode pedir a exclusão da conta e dos dados a qualquer momento."
+        },
+        {
+          "h": "Seus direitos",
+          "p": "Você pode pedir acesso, correção, exportação ou exclusão dos seus dados e retirar seu consentimento. Escreva para {{email}}."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Termos de uso",
+      "intro": "Ao usar a AfroPonte, você aceita as regras abaixo.",
+      "sections": [
+        {
+          "h": "O serviço",
+          "p": "A AfroPonte é um guia gratuito de negócios africanos no Brasil, com mensagens integradas. Nós mesmos não vendemos nenhum produto ou serviço."
+        },
+        {
+          "h": "Sua conta",
+          "p": "Você é responsável pela sua conta e pela confidencialidade da sua senha. Informe dados corretos. Uma conta pode ser suspensa em caso de abuso."
+        },
+        {
+          "h": "Cadastros de comerciantes",
+          "p": "Os comerciantes são responsáveis pela exatidão das informações (endereço, horários, preços). Cada cadastro é aprovado pela equipe antes da publicação e pode ser recusado ou removido se for falso ou enganoso."
+        },
+        {
+          "h": "Avaliações, fotos e mensagens",
+          "p": "Publique apenas conteúdos honestos, que lhe pertencem e respeitam os outros. São proibidos: insultos, assédio, discriminação, conteúdos ilegais, avaliações falsas e spam. Os conteúdos podem ser moderados ou removidos."
+        },
+        {
+          "h": "Denúncias",
+          "p": "Você pode denunciar um cadastro, uma avaliação, uma foto ou uma mensagem. A equipe analisa e pode suspender as contas envolvidas."
+        },
+        {
+          "h": "Responsabilidade",
+          "p": "As informações dos cadastros vêm dos comerciantes e dos usuários: não podemos garantir que estejam sempre corretas. As trocas e compras entre usuários e comerciantes são feitas sob responsabilidade deles."
+        },
+        {
+          "h": "Alterações",
+          "p": "Podemos alterar estes termos. A data de atualização aparece no fim da página."
+        }
+      ]
+    },
+    "legal": {
+      "title": "Informações legais",
+      "intro": "Informações sobre o responsável pelo site AfroPonte.",
+      "sections": [
+        {
+          "h": "Responsável",
+          "p": "O site é publicado por {{owner}}. Contato: {{email}}."
+        },
+        {
+          "h": "Hospedagem",
+          "p": "O site é hospedado por um prestador de hospedagem web; os dados dele são fornecidos mediante solicitação a {{email}}."
+        },
+        {
+          "h": "Propriedade intelectual",
+          "p": "O nome AfroPonte, o logotipo, o design do site e seus textos são protegidos. As fotos e textos publicados por usuários e comerciantes continuam sendo deles; ao publicá-los, eles autorizam a AfroPonte a exibi-los no site."
+        },
+        {
+          "h": "Dados pessoais",
+          "p": "O tratamento dos seus dados está descrito na política de privacidade."
+        },
+        {
+          "h": "Denunciar um conteúdo",
+          "p": "Para denunciar um conteúdo ilícito, use o botão de denúncia ou escreva para {{email}}."
+        }
+      ]
+    }
+  },
+  "merchant": {
+    "nav": {
+      "dashboard": "Meus comércios",
+      "add": "Cadastrar comércio",
+      "messages": "Mensagens"
+    },
+    "status": {
+      "all": "Todas",
+      "pending": "Pendente",
+      "approved": "Aprovada",
+      "rejected": "Recusada"
+    },
+    "dashboard": {
+      "title": "Meus comércios",
+      "subtitle": "Gerencie suas fichas, horários e fotos.",
+      "add": "Cadastrar meu comércio",
+      "loading": "Carregando…",
+      "loadError": "Não foi possível carregar suas fichas.",
+      "emptyTitle": "Você ainda não tem nenhum comércio",
+      "emptyText": "Cadastre seu restaurante, loja ou salão para ser encontrado pela comunidade.",
+      "emptyFilter": "Nenhuma ficha nesta categoria.",
+      "pendingNote": "Sua ficha está sendo analisada pela equipe. Ela ficará visível assim que for aprovada.",
+      "rejectedNote": "Sua ficha foi recusada. Edite-a e entre em contato conosco, se necessário.",
+      "edit": "Editar",
+      "reviews": "Avaliações",
+      "view": "Ver a ficha"
+    },
+    "form": {
+      "eyebrow": "Novo comércio",
+      "title": "Cadastrar meu comércio",
+      "intro": "Preencha as informações básicas. Os idiomas falados e os horários são definidos depois, na página de edição.",
+      "name": "Nome do comércio",
+      "category": "Categoria",
+      "country": "País de origem",
+      "city": "Cidade",
+      "phone": "Telefone",
+      "address": "Endereço",
+      "description": "Descrição",
+      "pricing": "Preços",
+      "pricingPlaceholder": "Ex.: prato do dia R$ 25, corte R$ 40",
+      "mapTitle": "Posição no mapa",
+      "mapHint": "Clique no mapa para marcar seu comércio (opcional).",
+      "choose": "Escolher…",
+      "submit": "Enviar para aprovação",
+      "submitting": "Enviando…",
+      "loadError": "Não foi possível carregar as listas.",
+      "error": "Ocorreu um erro. Verifique os campos e tente novamente.",
+      "forbidden": "Sua conta não tem permissão para cadastrar um comércio.",
+      "geoError": "Não foi possível obter sua posição.",
+      "useMyPosition": "Usar minha posição",
+      "clearPosition": "Apagar posição"
+    },
+    "edit": {
+      "eyebrow": "Editar minha ficha",
+      "notFound": "Ficha não encontrada.",
+      "forbidden": "Você não tem acesso a esta ficha.",
+      "loadError": "Não foi possível carregar a ficha.",
+      "back": "Voltar",
+      "viewPublic": "Ver a página pública",
+      "created": "Ficha criada. Ela ficará visível após a aprovação da equipe.",
+      "infoTitle": "Informações e idiomas",
+      "fixedNote": "O nome, a categoria, a cidade e o endereço não podem ser alterados aqui.",
+      "languagesTitle": "Idiomas falados",
+      "save": "Salvar",
+      "saving": "Salvando…",
+      "saved": "Alterações salvas.",
+      "saveError": "Não foi possível salvar. Tente novamente.",
+      "hoursTitle": "Horário de funcionamento",
+      "hoursHint": "Adicione um ou mais horários por dia. Um dia sem horário fica fechado.",
+      "closed": "Fechado",
+      "opens": "Abertura",
+      "closes": "Fechamento",
+      "addSlot": "Adicionar horário",
+      "removeSlot": "Remover",
+      "saveHours": "Salvar horários",
+      "hoursSaved": "Horários salvos.",
+      "hoursIncomplete": "Cada horário precisa de uma hora de abertura e de fechamento.",
+      "hoursOrder": "A hora de fechamento deve ser depois da hora de abertura.",
+      "hoursOverlap": "Dois horários do mesmo dia se sobrepõem.",
+      "photosTitle": "Fotos",
+      "photosLocked": "Você poderá adicionar fotos assim que sua ficha for aprovada.",
+      "photosHint": "Formatos JPG, PNG ou WebP, no máximo 4 MB.",
+      "noPhotos": "Nenhuma foto publicada por enquanto.",
+      "upload": "Adicionar uma foto",
+      "uploading": "Enviando…",
+      "uploaded": "Foto enviada. Ela aparecerá após a aprovação.",
+      "photoType": "Formato não aceito (somente JPG, PNG ou WebP).",
+      "photoTooBig": "A foto tem mais de 4 MB.",
+      "photoError": "Não foi possível enviar a foto."
+    }
+  },
+ 
+  "guide": {
+    "badge": "Guia de utilização",
+    "titlePre": "Como usar o ",
+    "titlePost": "?",
+    "intro": "Siga este guia passo a passo para descobrir facilmente restaurantes, lojas e serviços africanos perto de você.",
+    "heroAlt": "Uma pessoa consulta o AfroPonte no celular",
+    "stepsLabel": "Etapas do guia",
+    "stepLabel": "Etapa {{n}}",
+    "done": "Etapa concluída",
+    "tipLabel": "Dica:",
+    "prev": "Anterior",
+    "next": "Próximo",
+    "finish": "Concluir",
+    "goTo": "Ir para a etapa {{n}}",
+    "steps": {
+      "access": {
+        "title": "Acessar o site",
+        "short": "Abra o AfroPonte no seu navegador.",
+        "alt": "Página inicial do AfroPonte",
+        "bubble": "1. Clique em “Explorar”",
+        "tip": "Você também pode usar a barra de busca da página inicial ou o botão “Perto de mim”."
+      },
+      "choose": {
+        "title": "Escolher um tipo de comércio",
+        "short": "Restaurante, loja, salão de beleza, ateliê de costura…",
+        "alt": "Página Explorar com as categorias de comércios",
+        "bubble": "2. Escolha o tipo de comércio",
+        "tip": "Refine por cidade, país de origem, pela vista Mapa ou por “Perto de mim”."
+      },
+      "details": {
+        "title": "Ver os detalhes",
+        "short": "Horários, endereço, avaliações e fotos do comércio.",
+        "alt": "Lista de restaurantes com o botão Descobrir",
+        "bubble": "3. Clique em um cartão para ver os detalhes",
+        "tip": "A página mostra horários, endereço e avaliações da comunidade, e você pode adicionar o comércio aos favoritos."
+      },
+      "account": {
+        "title": "Entrar",
+        "short": "Crie uma conta para aproveitar todos os recursos.",
+        "alt": "Formulário de criação de conta",
+        "bubble": "4. Crie sua conta ou entre",
+        "tip": "Com uma conta: favoritos, avaliações, mensagens aos comerciantes e inscrição em eventos."
+      }
+    }
+  
+}
+
+}

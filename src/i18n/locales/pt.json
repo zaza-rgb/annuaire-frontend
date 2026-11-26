@@ -14,43 +14,46 @@
     "menuOpen": "Abrir o menu",
     "menuClose": "Fechar o menu",
     "merchant": "Área do comerciante",
-      "events": "Eventos",
-"organizer": "Meus eventos organizados"
+    "events": "Eventos",
+    "organizer": "Meus eventos organizados",
+    "guide": "Guia de uso",
+    "dashboard": "Painel",
+    "logoutQuestion": "Deseja sair da conta?"
   },
   "events": {
-  "eyebrow": "Encontros",
-  "heroA": "Descubra os",
-  "heroB": "eventos",
-  "heroC": "da comunidade africana",
-  "lead": "Festas, encontros, cultos, esporte: encontre sua comunidade perto de você.",
-  "explore": "Explorar eventos",
-  "searchPlaceholder": "Pesquisar um evento…",
-  "cityPlaceholder": "Cidade",
-  "language": "Idioma",
-  "category": "Categoria",
-  "allLanguages": "Todos os idiomas",
-  "allCategories": "Todas as categorias",
-  "date": "Data",
-  "searchBtn": "Pesquisar",
-  "nearMe": "Perto de mim",
-  "nearMeOn": "Perto de mim: ativado",
-  "radius": "Raio de busca",
-  "geoUnavailable": "A geolocalização não está disponível neste navegador.",
-  "geoDenied": "Não foi possível obter sua posição. Permita a localização no navegador.",
-  "upcoming": "Próximos eventos",
-  "viewAll": "Ver todos",
-  "searching": "Pesquisando…",
-  "count_one": "{{count}} evento encontrado",
-  "count_other": "{{count}} eventos encontrados",
-  "empty": "Nenhum evento. Tente outra busca.",
-  "loadError": "Não foi possível carregar os eventos.",
-  "registered_one": "{{count}} inscrito",
-  "registered_other": "{{count}} inscritos",
-  "placesLeft": "{{n}} vaga(s) restante(s)",
-  "full": "Esgotado",
-  "see": "Ver",
-  "register": "Inscrever-se"
-},
+    "eyebrow": "Encontros",
+    "heroA": "Descubra os",
+    "heroB": "eventos",
+    "heroC": "da comunidade africana",
+    "lead": "Festas, encontros, cultos, esporte: encontre sua comunidade perto de você.",
+    "explore": "Explorar eventos",
+    "searchPlaceholder": "Pesquisar um evento…",
+    "cityPlaceholder": "Cidade",
+    "language": "Idioma",
+    "category": "Categoria",
+    "allLanguages": "Todos os idiomas",
+    "allCategories": "Todas as categorias",
+    "date": "Data",
+    "searchBtn": "Pesquisar",
+    "nearMe": "Perto de mim",
+    "nearMeOn": "Perto de mim: ativado",
+    "radius": "Raio de busca",
+    "geoUnavailable": "A geolocalização não está disponível neste navegador.",
+    "geoDenied": "Não foi possível obter sua posição. Permita a localização no navegador.",
+    "upcoming": "Próximos eventos",
+    "viewAll": "Ver todos",
+    "searching": "Pesquisando…",
+    "count_one": "{{count}} evento encontrado",
+    "count_other": "{{count}} eventos encontrados",
+    "empty": "Nenhum evento. Tente outra busca.",
+    "loadError": "Não foi possível carregar os eventos.",
+    "registered_one": "{{count}} inscrito",
+    "registered_other": "{{count}} inscritos",
+    "placesLeft": "{{n}} vaga(s) restante(s)",
+    "full": "Esgotado",
+    "see": "Ver",
+    "register": "Inscrever-se"
+  },
   "home": {
     "eyebrow": "O guia afro do Brasil",
     "titleLine": "Viva a riqueza",
@@ -174,7 +177,11 @@
     "readonly": "Estas informações não podem ser alteradas aqui.",
     "email": "E-mail",
     "accountType": "Tipo de conta",
-    "status": "Status"
+    "status": "Status",
+    "edit": "Editar",
+    "notProvided": "Não informado",
+    "cancel": "Cancelar",
+    "back": "Voltar"
   },
   "roles": {
     "user": "Pessoa física",
@@ -574,7 +581,18 @@
     "nav": {
       "dashboard": "Meus comércios",
       "add": "Cadastrar comércio",
-      "messages": "Mensagens"
+      "messages": "Mensagens",
+      "menu": "Menu da área do comerciante",
+      "role": "Comerciante",
+      "soon": "Em breve",
+      "backSite": "Voltar ao site",
+      "logout": "Sair",
+      "business": "Meu estabelecimento",
+      "photos": "Galeria de fotos",
+      "reviews": "Minhas avaliações",
+      "stats": "Estatísticas",
+      "notifications": "Notificações",
+      "settings": "Configurações"
     },
     "status": {
       "all": "Todas",
@@ -659,7 +677,65 @@
       "photoType": "Formato não aceito (somente JPG, PNG ou WebP).",
       "photoTooBig": "A foto tem mais de 4 MB.",
       "photoError": "Não foi possível enviar a foto."
+    },
+    "dash": {
+      "hello": "Olá, {{name}}!",
+      "fallbackName": "comerciante",
+      "heroText": "Aqui está um resumo da sua atividade hoje.",
+      "overviewTitle": "Visão geral",
+      "listTitle": "Meus estabelecimentos",
+      "quickTitle": "Acesso rápido",
+      "total": "Estabelecimentos",
+      "approved": "Aprovados",
+      "pending": "Pendentes",
+      "reviews": "Avaliações recebidas",
+      "average": "Nota média",
+      "messages": "Mensagens"
+    }
+  },
+  "guide": {
+    "badge": "Guia de utilização",
+    "titlePre": "Como usar o ",
+    "titlePost": "?",
+    "intro": "Siga este guia passo a passo para descobrir facilmente restaurantes, lojas e serviços africanos perto de você.",
+    "heroAlt": "Uma pessoa consulta o AfroPonte no celular",
+    "stepsLabel": "Etapas do guia",
+    "stepLabel": "Etapa {{n}}",
+    "done": "Etapa concluída",
+    "tipLabel": "Dica:",
+    "prev": "Anterior",
+    "next": "Próximo",
+    "finish": "Concluir",
+    "goTo": "Ir para a etapa {{n}}",
+    "steps": {
+      "access": {
+        "title": "Acessar o site",
+        "short": "Abra o AfroPonte no seu navegador.",
+        "alt": "Página inicial do AfroPonte",
+        "bubble": "1. Clique em “Explorar”",
+        "tip": "Você também pode usar a barra de busca da página inicial ou o botão “Perto de mim”."
+      },
+      "choose": {
+        "title": "Escolher um tipo de comércio",
+        "short": "Restaurante, loja, salão de beleza, ateliê de costura…",
+        "alt": "Página Explorar com as categorias de comércios",
+        "bubble": "2. Escolha o tipo de comércio",
+        "tip": "Refine por cidade, país de origem, pela vista Mapa ou por “Perto de mim”."
+      },
+      "details": {
+        "title": "Ver os detalhes",
+        "short": "Horários, endereço, avaliações e fotos do comércio.",
+        "alt": "Lista de restaurantes com o botão Descobrir",
+        "bubble": "3. Clique em um cartão para ver os detalhes",
+        "tip": "A página mostra horários, endereço e avaliações da comunidade, e você pode adicionar o comércio aos favoritos."
+      },
+      "account": {
+        "title": "Entrar",
+        "short": "Crie uma conta para aproveitar todos os recursos.",
+        "alt": "Formulário de criação de conta",
+        "bubble": "4. Crie sua conta ou entre",
+        "tip": "Com uma conta: favoritos, avaliações, mensagens aos comerciantes e inscrição em eventos."
+      }
     }
   }
-
 }

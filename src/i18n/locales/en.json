@@ -15,42 +15,45 @@
     "menuClose": "Close menu",
     "merchant": "Merchant area",
     "events": "Events",
-"organizer": "My organized events"
+    "organizer": "My organized events",
+    "guide": "User guide",
+    "dashboard": "Dashboard",
+    "logoutQuestion": "Do you want to log out?"
   },
   "events": {
-  "eyebrow": "Meetups",
-  "heroA": "Discover the",
-  "heroB": "events",
-  "heroC": "of the African community",
-  "lead": "Parties, gatherings, services, sports: find your community close to home.",
-  "explore": "Explore events",
-  "searchPlaceholder": "Search for an event…",
-  "cityPlaceholder": "City",
-  "language": "Language",
-  "category": "Category",
-  "allLanguages": "All languages",
-  "allCategories": "All categories",
-  "date": "Date",
-  "searchBtn": "Search",
-  "nearMe": "Near me",
-  "nearMeOn": "Near me: on",
-  "radius": "Search radius",
-  "geoUnavailable": "Geolocation is not available in this browser.",
-  "geoDenied": "Unable to get your position. Allow location access in your browser.",
-  "upcoming": "Upcoming events",
-  "viewAll": "View all",
-  "searching": "Searching…",
-  "count_one": "{{count}} event found",
-  "count_other": "{{count}} events found",
-  "empty": "No events. Try another search.",
-  "loadError": "Unable to load events.",
-  "registered_one": "{{count}} registered",
-  "registered_other": "{{count}} registered",
-  "placesLeft": "{{n}} place(s) left",
-  "full": "Full",
-  "see": "View",
-  "register": "Register"
-},
+    "eyebrow": "Meetups",
+    "heroA": "Discover the",
+    "heroB": "events",
+    "heroC": "of the African community",
+    "lead": "Parties, gatherings, services, sports: find your community close to home.",
+    "explore": "Explore events",
+    "searchPlaceholder": "Search for an event…",
+    "cityPlaceholder": "City",
+    "language": "Language",
+    "category": "Category",
+    "allLanguages": "All languages",
+    "allCategories": "All categories",
+    "date": "Date",
+    "searchBtn": "Search",
+    "nearMe": "Near me",
+    "nearMeOn": "Near me: on",
+    "radius": "Search radius",
+    "geoUnavailable": "Geolocation is not available in this browser.",
+    "geoDenied": "Unable to get your position. Allow location access in your browser.",
+    "upcoming": "Upcoming events",
+    "viewAll": "View all",
+    "searching": "Searching…",
+    "count_one": "{{count}} event found",
+    "count_other": "{{count}} events found",
+    "empty": "No events. Try another search.",
+    "loadError": "Unable to load events.",
+    "registered_one": "{{count}} registered",
+    "registered_other": "{{count}} registered",
+    "placesLeft": "{{n}} place(s) left",
+    "full": "Full",
+    "see": "View",
+    "register": "Register"
+  },
   "home": {
     "eyebrow": "The Afro directory of Brazil",
     "titleLine": "Experience the richness",
@@ -174,7 +177,11 @@
     "readonly": "This information cannot be changed here.",
     "email": "Email",
     "accountType": "Account type",
-    "status": "Status"
+    "status": "Status",
+    "edit": "Edit",
+    "notProvided": "Not provided",
+    "cancel": "Cancel",
+    "back": "Back"
   },
   "roles": {
     "user": "Individual",
@@ -584,7 +591,18 @@
     "nav": {
       "dashboard": "My businesses",
       "add": "Add a business",
-      "messages": "Messages"
+      "messages": "Messages",
+      "menu": "Merchant area menu",
+      "role": "Merchant",
+      "soon": "Soon",
+      "backSite": "Back to site",
+      "logout": "Log out",
+      "business": "My business",
+      "photos": "Photo gallery",
+      "reviews": "My reviews",
+      "stats": "Statistics",
+      "notifications": "Notifications",
+      "settings": "Settings"
     },
     "status": {
       "all": "All",
@@ -669,7 +687,65 @@
       "photoType": "Unsupported format (JPG, PNG or WebP only).",
       "photoTooBig": "The photo is larger than 4 MB.",
       "photoError": "Could not upload the photo."
+    },
+    "dash": {
+      "hello": "Hello {{name}}!",
+      "fallbackName": "there",
+      "heroText": "Here is an overview of your activity today.",
+      "overviewTitle": "Overview",
+      "listTitle": "My businesses",
+      "quickTitle": "Quick access",
+      "total": "Businesses",
+      "approved": "Approved",
+      "pending": "Pending",
+      "reviews": "Reviews received",
+      "average": "Average rating",
+      "messages": "Messages"
+    }
+  },
+  "guide": {
+    "badge": "User guide",
+    "titlePre": "How to use ",
+    "titlePost": "?",
+    "intro": "Follow this guide step by step to easily discover African restaurants, shops and services near you.",
+    "heroAlt": "A person browsing AfroPonte on their phone",
+    "stepsLabel": "Guide steps",
+    "stepLabel": "Step {{n}}",
+    "done": "Step completed",
+    "tipLabel": "Tip:",
+    "prev": "Previous",
+    "next": "Next",
+    "finish": "Finish",
+    "goTo": "Go to step {{n}}",
+    "steps": {
+      "access": {
+        "title": "Open the site",
+        "short": "Open AfroPonte from your browser.",
+        "alt": "AfroPonte home page",
+        "bubble": "1. Click “Explorer”",
+        "tip": "You can also use the search bar on the home page or the “Near me” button."
+      },
+      "choose": {
+        "title": "Choose a type of business",
+        "short": "Restaurant, shop, hair salon, sewing workshop…",
+        "alt": "Explorer page with the business categories",
+        "bubble": "2. Choose the type of business",
+        "tip": "Narrow down by city, country of origin, the Map view or “Near me”."
+      },
+      "details": {
+        "title": "See the details",
+        "short": "Opening hours, address, reviews and photos.",
+        "alt": "List of restaurants with the Discover button",
+        "bubble": "3. Click a card to see the details",
+        "tip": "The page shows opening hours, address and community reviews, and you can add the business to your favorites."
+      },
+      "account": {
+        "title": "Sign in",
+        "short": "Create an account to enjoy all the features.",
+        "alt": "Account creation form",
+        "bubble": "4. Create your account or sign in",
+        "tip": "With an account: favorites, reviews, messages to merchants and event registration."
+      }
     }
   }
-  
 }
